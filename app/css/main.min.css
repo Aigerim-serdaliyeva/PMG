@@ -484,7 +484,7 @@ h1, h2, h3, h4, h5, h6 {
       right: 0;
       left: 0;
       z-index: -1; }
-    .main-menu li.last {
+    .main-menu li:last-child {
       margin-bottom: 0; }
     .main-menu li.link a:hover, .main-menu li.active a {
       color: #383838; }
@@ -501,7 +501,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 20px;
     background: #F7F7F7; }
 
-.menu {
+.submenu {
   max-width: 150px;
   width: 100%;
   background: #fff;
@@ -509,20 +509,20 @@ h1, h2, h3, h4, h5, h6 {
   left: 290px;
   position: absolute;
   z-index: 800; }
-  .menu ul {
+  .submenu ul {
     list-style: none;
     text-align: center;
     padding: 0;
     margin: 424px 0 0 0; }
-  .menu li {
+  .submenu li {
     margin-bottom: 20px; }
-    .menu li:last-child {
+    .submenu li:last-child {
       margin-bottom: 0; }
-    .menu li.link a:hover, .menu li.active a {
+    .submenu li.link a:hover, .submenu li.active a {
       color: #383838; }
-    .menu li::before {
+    .submenu li::before {
       display: none; }
-  .menu a {
+  .submenu a {
     font-size: 13px;
     line-height: 15px;
     background: none; }
@@ -541,13 +541,23 @@ h1, h2, h3, h4, h5, h6 {
     .main .rombs .romb {
       background: #fff; }
   .main__title {
-    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     background: #004C36;
     -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin: 182px 0 0;
-    padding: 80px 10px 65px;
-    position: relative; }
+    padding: 80px 10px 65px; }
     .main__title--service {
       margin-top: 150px; }
     .main__title h2 {
@@ -558,26 +568,12 @@ h1, h2, h3, h4, h5, h6 {
       background: #004C36 !important;
       padding: 0 10px;
       display: inline-block; }
-    .main__title--img {
-      padding: 38px 10px; }
-    .main__title::before {
+    .main__title::before, .main__title::after {
       content: "";
-      position: absolute;
-      max-width: 124px;
-      width: 100%;
+      display: block;
+      width: 124px;
       height: 1px;
-      background: #fff;
-      left: 114px;
-      top: 55%; }
-    .main__title::after {
-      content: "";
-      position: absolute;
-      max-width: 124px;
-      width: 100%;
-      height: 1px;
-      background: #fff;
-      right: 114px;
-      top: 55%; }
+      background: #fff; }
   .main__content {
     padding: 80px 15px 20px;
     max-width: 670px;

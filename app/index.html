@@ -13,15 +13,35 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:image" content="path/to/image.jpg">
-  <link rel="shortcut icon" href="img/favicon.ico?v=1" type="image/x-icon">
-  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <!-- <meta property="og:image" content="path/to/image.jpg"> -->
+  <!-- <link rel="shortcut icon" href="img/favicon.ico?v=1" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png"> -->
+  <style>
+    .loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #F7F7F7;
+      z-index: 10000;
+    }
+    .loader__content {
+      color: #383838;
+      font-size: 24px;
+    }
+  </style>
   <link rel="stylesheet" href="./css/libs.min.css">
   <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body id="main-page">
-
+  <div class="loader">
+    <div class="loader__content">Loading....</div>
+  </div>
   <div class="page-wrapper">
 
     <nav class="header">
@@ -47,7 +67,7 @@
       <div class="main-menu">
         <ul>
           <li class="link">
-            <a href="#menu">О компании</a>
+            <a href="#company">О компании</a>
           </li>
           <li class="link">
             <a href="#advantage">Преимущества</a>
@@ -58,7 +78,7 @@
           <li class="link">
             <a href="#project">Проекты</a>
           </li>
-          <li class="link last">
+          <li class="link">
             <a href="#contact">Контакты</a>
           </li>
         </ul>
@@ -84,7 +104,7 @@
 
     </nav>
 
-    <div class="menu" id="menu"> 
+    <div class="submenu" id="menu"> 
       <ul>
         <li class="link">
           <a href="#pmg">P M G</a>
@@ -93,20 +113,20 @@
           <a href="#vision">Наше видение</a>
         </li>
         <li class="link">
-          <a href="#company">Миссия компании</a>
+          <a href="#mission">Миссия компании</a>
         </li>
         <li class="link">
           <a href="#goal">Наша цель</a>
         </li>
-        <li class="link last">
-          <a href="#contact">Наша команда</a>
+        <li class="link">
+          <a href="#command">Наша команда</a>
         </li>
       </ul>
     </div>
 
     <div class="container">
 
-      <div class="main " id="pmg">
+      <div class="main" id="pmg">
         <div class="figure">
           <img src="./img/dollar.png" alt="">
         </div>
@@ -147,7 +167,7 @@
         </div>
       </div>
 
-      <div class="main d-none" id="company">
+      <div class="main d-none" id="mission">
         <div class="figure">
         </div>
         <div class="content">
