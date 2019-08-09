@@ -387,7 +387,7 @@ h1, h2, h3, h4, h5, h6 {
 .page-wrapper {
   overflow: hidden;
   min-height: 100vh;
-  background: red;
+  background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -422,7 +422,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   top: 0;
-  z-index: 900;
+  z-index: 90;
   background: #F7F7F7;
   -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.18);
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.18);
@@ -508,7 +508,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   left: 290px;
   position: absolute;
-  z-index: 800; }
+  z-index: 80; }
   .submenu ul {
     list-style: none;
     text-align: center;
@@ -533,7 +533,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   background: #F7F7F7;
   position: absolute;
-  z-index: 700;
+  z-index: 70;
   color: #fff; }
   .main .rombs {
     text-align: center;
@@ -576,12 +576,11 @@ h1, h2, h3, h4, h5, h6 {
       background: #fff; }
   .main__content {
     padding: 80px 15px 20px;
-    max-width: 670px;
-    width: 100%;
+    width: 90.3%;
     margin: 0 auto; }
     .main__content--service {
       padding: 60px 15px 20px;
-      max-width: 750px !important; }
+      width: 97%; }
   .main__text {
     font-size: 18px;
     line-height: 25px;
@@ -666,13 +665,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .content {
   height: 100%;
-  max-width: 740px;
-  width: 100%;
+  width: 38.6%;
   position: absolute;
   right: 38.5%;
   background: #044230; }
   .content--max {
-    max-width: 890px; }
+    max-width: 890px;
+    width: 48%; }
     .content--max .main__content {
       max-width: 720px; }
   .content--project {
@@ -696,8 +695,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 290px; }
 
 .figure {
-  max-width: 740px;
-  width: 100%;
+  width: 38.6%;
   background: #F7F7F7;
   height: 100%;
   position: fixed;
