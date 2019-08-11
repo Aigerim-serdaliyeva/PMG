@@ -2,10 +2,10 @@
 
 .page-wrapper {
   overflow: hidden;
-  min-height: 100vh;
-  background-color: #fff;
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #F7F7F7;
 }
 
 .rombs {
@@ -20,12 +20,8 @@
   }
 }
 
-.section {
-  display: flex;
-}
-
 .d-none {
-  display: none;
+  display: none !important;
 }
 
 .active {
@@ -34,24 +30,18 @@
 
 .header {
   font-family: Arial, serif;
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // top: 0;
-  z-index: 90;
-  background: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.18);
-  max-width: 290px;
-  width: 100%;
-  // height: 100%;
-  height: 100vh;
+  width: 15.1%;
+  min-width: 250px;
   padding: 30px 0 39px;
   display: flex;
   flex-direction: column;  
+  justify-content: space-between;
+  z-index: 3;
+  position: relative;
 
   &__content {
     text-align: center;
-    margin-bottom: 185px;
   }
 
   &__language {
@@ -80,11 +70,13 @@
   &__icons {
     margin-bottom: 11px;
   }
-
 }
 
 .main-menu {    
-  flex-grow: 1;
+  position: absolute;
+  text-align: center;
+  top: 41%;
+  width: 100%;
   ul {
     list-style: none;
     padding: 0;
@@ -139,19 +131,18 @@
 }
 
 .submenu {
-  max-width: 150px;
-  width: 100%;
+  width: 7.8%;
+  min-width: 120px;
   background: #fff;
-  height: 100vh;
-  // height: 100%;
-  // left: 290px;
-  // position: absolute;
-  z-index: 80;
+  position: relative;
   ul {     
     list-style: none;
     text-align: center;
     padding: 0;
-    margin: 424px 0 0 0;
+    margin: 0;
+    position: absolute;
+    top: 41%;
+    width: 100%;
   }
   li {
     margin-bottom: 20px;
@@ -174,20 +165,14 @@
 
 .container {
   display: flex;
+  flex-grow: 1;
 }
 
 .main {
   font-family: OpenSans, serif;
-  // width: 100%;
-  // height: 100%;
-  height: 100vh;
-  background: #F7F7F7;
-  // position: absolute;
-  z-index: 70;
-  color: #fff;
-  max-width: 1480px;
+  display: flex;
   width: 100%;
-  // display: flex;
+  color: #fff;
 
   .rombs {
     text-align: center;
@@ -203,9 +188,8 @@
     align-items: center;
     background: #004C36;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin: 182px 0 0;       
-    padding: 80px 10px 65px;
-    // position: relative;
+    margin: 24.6% 0 0;       
+    padding: 39px 10px;
     
     &--service {
       margin-top: 150px;
@@ -356,28 +340,19 @@
 }
 
 .content {
-  height: 100%;
-  max-width: 740px;
-  width: 100%;
-  // width: 38.6%;
-  position: absolute;
-  // right: 38.5%;
+  width: 50%;
   background: #044230;
-
-  &--max {
-    max-width: 890px;
-    width: 48%;
-
-    .main__content {
-      max-width: 720px;
-    }
-  }
+  overflow: auto;
 
   &--project {
     background: #004C36;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  &--max {
+    width: 54.6%;
   }
 }
 
@@ -387,19 +362,55 @@
 }
 
 .figure {
-  max-width: 740px;
-  width: 100%;
-  height: 100vh;
-  // width: 38.6%;
-  background: #F7F7F7;
-  // height: 100%;
-  // z-index: 90;
-  position: fixed;
-  right: 0;
+  position: relative;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.project-anime {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 16px;
+  height: 16px;
+}
+
+.service-anime {
+  position: relative;
+  &__item {
+    position: absolute;
+    padding-left: 15px;
+    transform-origin: 0% 50%;
+
+    &:nth-child(2) {
+      // transform: rotate(120deg);
+    }
+
+    &:nth-child(3) {
+      // transform: rotate(240deg);
+    }
+  }
+  &__dot {
+    width: 40px;
+    height: 40px;
+    background: $accent;
+    border-radius: 50%;
+    // position: absolute;
+  }
+  &__text {
+    position: absolute;
+    width: 254px;
+    font-size: 24px;
+    color: #313131;
+    font-family: Open Sans, serif;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 65px;
+    opacity: 0;
+  }
 }
 
 #particle-canvas {
@@ -409,20 +420,20 @@
   vertical-align: middle;
 }
 
-.animation  {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
+// .animation  {
+//   position: absolute;
+//   margin: auto;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   opacity: 0;
+//   -webkit-transition: all 0.2s ease-in-out;
+//   -moz-transition: all 0.2s ease-in-out;
+//   -o-transition: all 0.2s ease-in-out;
+//   -ms-transition: all 0.2s ease-in-out;
+//   transition: all 0.2s ease-in-out;
+// }
 
 .dot {
   background: url(../img/dot-green.png) right center no-repeat;

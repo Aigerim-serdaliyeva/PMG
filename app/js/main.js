@@ -6,6 +6,73 @@ $(document).ready(function () {
   const $companyLink = $('[href="#company"]').closest('li');
   const submenuList = ["#pmg", "#vision", "#mission", "#goal", "#command"];
 
+  const projectAnime = anime({
+    targets: ".project-anime",
+    loop: true,
+    autoplay: false,
+    keyframes: [
+      {
+        width: '128px',
+        height: '128px',
+        top: 'calc(50% - 64px)',
+        right: 'calc(50% - 64px)',
+        duration: 2000,
+        easing: 'easeOutElastic(1, .4)'
+      },
+      {
+        rotate: '1turn',
+        scale: 0,
+        duration: 500,
+        easing: 'linear'
+      }
+    ],
+    delay: (el,i) => i * 2500
+  });
+
+  const serviceAnime = anime({
+    targets: '.service-anime__item',
+    delay: 2000,
+    loop: true,
+    autoplay: false,
+    easing: 'easeInOutSine',
+    keyframes: [
+      {
+        rotate: '+=120deg',
+        duration: 1000,
+        endDelay: 2000
+      },
+      {
+        rotate: '+=120deg',
+        duration: 1000,
+        endDelay: 2000
+      },
+      {
+        rotate: '+=120deg',
+        duration: 1000
+      }
+    ]
+  });
+
+  const serviceAnimeText = anime({
+    targets: '.service-anime__text',
+    delay: anime.stagger(3000),
+    loop: true,
+    easing: 'easeInOutSine',
+    endDelay: 1000,
+    autoplay: false,
+    keyframes: [
+      {
+        opacity: 1,
+        duration: 500,
+        endDelay: 1000
+      },
+      {
+        opacity: 0,
+        duration: 500
+      }
+    ]
+  });
+
   $loader.addClass('d-none');
   showPage(location.hash);
 
@@ -40,6 +107,20 @@ $(document).ready(function () {
       $companyLink.addClass('active');
     } else {
       $submenu.addClass('d-none');
+    }
+
+    if (route === "#project") {
+      projectAnime.restart();
+    } else {
+      projectAnime.pause();
+    }
+
+    if (route === "#service") {
+      serviceAnime.restart();
+      serviceAnimeText.restart();
+    } else {
+      serviceAnime.pause();
+      serviceAnimeText.pause();
     }
   }
 
