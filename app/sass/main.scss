@@ -8,6 +8,19 @@
   background-color: #F7F7F7;
 }
 
+#particles-js {
+  position: absolute;
+  top: -20%;
+  left: 35%;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 1500px;
+  z-index: -1;
+  width: 40%;
+  transform: rotate(30deg);
+}
+
 .rombs {
   margin-bottom: 16px;
   .romb {
@@ -25,14 +38,14 @@
 }
 
 .active {
-  display: block;
+  display: block !important;
 }
 
 .header {
   font-family: Arial, serif;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.18);
   width: 15.1%;
-  min-width: 250px;
+  min-width: 290px;
   padding: 30px 0 39px;
   display: flex;
   flex-direction: column;  
@@ -132,7 +145,7 @@
 
 .submenu {
   width: 7.8%;
-  min-width: 120px;
+  min-width: 150px;
   background: #fff;
   position: relative;
   ul {     
@@ -190,56 +203,37 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin: 24.6% 0 0;       
     padding: 39px 10px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 41px;
+    text-align: center;
     
     &--service {
-      margin-top: 150px;
+      margin-top: 17%;
     }
 
-    h2 {
-      font-family: Arial;
-      font-weight: bold;
-      font-size: 36px;
-      line-height: 41px;
-      background: #004C36 !important;
+    span {      
       padding: 0 10px;
       display: inline-block;      
     }
-    // &--img {
-    //   padding: 38px 10px; 
-    // }
 
     &::before, &::after {
       content: "";
       display: block;
-      // position: absolute;
-      // top: 50%;
-      // transform: translateY(-50%);
-      // max-width: 124px;
       width: 124px;
       height: 1px;
       background: #fff;
     }
 
-    // &::before {
-    //   left: 0;
-    // }
-    
-    // &::after {
-    //   right: 0;
-    // }
   }
 
   &__content {
-    padding: 80px 15px 20px;
-    // max-width: 670px;
-    // width: 100%;
-    width: 90.3%;
+    padding: 10.5% 6.7% 2.7%;
     margin: 0 auto;
 
     &--service {
-      padding: 60px 15px 20px;
-      // max-width: 750px !important;
-      width: 97%;
+      padding: 6.8% 10% 1.5%;
     }
   }
 
@@ -306,7 +300,8 @@
   display: flex;
   justify-content: space-between;
   background: #044230;  
-  padding: 30px 30px 30px 60px;
+  // padding: 30px 30px 30px 60px;
+  padding: 4% 7.8% 4% 7.8%;
   margin-bottom: 39px;
   &:last-child {
     margin-bottom: 0;
@@ -324,6 +319,11 @@
   &__block {
     max-width: 550px;
     width: 100%;
+  }
+
+  &__text {
+    margin: 0;
+    line-height: 19px;
   }
 
   .more {
@@ -358,7 +358,7 @@
 
 .pmg-img {
   text-align: center;
-  margin-top: 290px;
+  margin-top: 32.5%;
 }
 
 .figure {
@@ -368,14 +368,63 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.pmg-anime {
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $accent;
+    margin-bottom: 25px;
+    position: absolute;
+    opacity: 0;
+
+    &.one {
+      bottom: 10%;
+      left: 5px;
+    }
+
+    &.two {
+      top: 8%;
+      right: 48%;
+    }
+
+    &.three {
+      right: 2%;
+      bottom: 15%;
+    }
+
+    &.four {
+      bottom: 0;
+      left: 25%;
+    }
+
+    span {
+      position: absolute;
+      left: 60px;
+      font-family: Open Sans;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      color: #313131;
+      white-space: nowrap;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+  }
 }
 
 .project-anime {
   position: absolute;
-  top: -16px;
-  right: -16px;
-  width: 16px;
-  height: 16px;
+  top: 10%;
+  right: 20%;
+  width: 10px;
+  height: 10px;
+  opacity: 0;
 }
 
 .service-anime {
@@ -384,21 +433,12 @@
     position: absolute;
     padding-left: 15px;
     transform-origin: 0% 50%;
-
-    &:nth-child(2) {
-      // transform: rotate(120deg);
-    }
-
-    &:nth-child(3) {
-      // transform: rotate(240deg);
-    }
   }
   &__dot {
     width: 40px;
     height: 40px;
     background: $accent;
     border-radius: 50%;
-    // position: absolute;
   }
   &__text {
     position: absolute;
@@ -413,6 +453,53 @@
   }
 }
 
+.advantage-anime {
+  z-index: 2;
+
+  .dot {
+    width: 40px;
+    height: 40px;
+    background: $accent;
+    border-radius: 50%;
+    position: relative;
+    opacity: 0;
+
+    span {
+      position: absolute;
+      color: #313131;
+      font-family: Arial;
+      font-weight: normal;
+      font-size: 24px;
+      opacity: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      white-space: nowrap;
+    }
+
+    &.first, &.third {
+      margin-left: 90px;
+      span {
+        left: 60px;
+      }
+    }
+
+    &.second, &.fourth {
+      margin-right: 90px;
+      span {
+        right: 60px;
+      }
+    }
+  }
+
+  .line {
+    text-align: center;
+    img {
+      opacity: 0;
+    }
+  }
+  
+}
+
 #particle-canvas {
   width: 100%;
   height: 100vh;
@@ -420,86 +507,10 @@
   vertical-align: middle;
 }
 
-// .animation  {
-//   position: absolute;
-//   margin: auto;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   opacity: 0;
-//   -webkit-transition: all 0.2s ease-in-out;
-//   -moz-transition: all 0.2s ease-in-out;
-//   -o-transition: all 0.2s ease-in-out;
-//   -ms-transition: all 0.2s ease-in-out;
-//   transition: all 0.2s ease-in-out;
-// }
 
-.dot {
-  background: url(../img/dot-green.png) right center no-repeat;
-  background-size: 77px 77px;
-  height: 77px;
-  line-height: 77px;
-  margin-right: 48%;
-  padding-right: 60px;
-  text-align: right;
-  position: relative;
-  z-index: 1;
-  opacity: 0;
 
-  span {
-    font-family: Arial;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-  }
 
-  &.first {
-    margin-left: 48%;
-    margin-right: auto;
-    padding-left: 60px;
-    padding-right: 0;
-    background-position: left center;
-    text-align: left;
-  }
 
-  &.second {
-    animation: showit 0.1s ease-in 0.9s forwards;
-  }
-
-  &.third {
-    margin-left: 48%;
-    margin-right: auto;
-    padding-left: 60px;
-    padding-right: 0;
-    background-position: left center;
-    text-align: left;
-  }
-
-  &.fourth {
-    animation: showit 0.1s ease-in 2.5s forwards;
-  }
-}
-
-.line {
-  height: 0;
-  width: 63px;
-  background: url(../img/line-1.png) no-repeat left top;
-  background-size: 63px 41px;
-  margin: -40px auto;
-
-  &.two {
-    background: url(../img/line-2.png) no-repeat left top;
-    background-size: 63px 41px;
-    -webkit-animation: line 0.3s ease-in 1.3s forwards;
-    -moz-animation: line 0.3s ease-in 1.3s forwards;
-    animation: line 0.3s ease-in 1.3s forwards;
-  }
-
-  &.three {
-    animation: line 0.3s ease-in 2s forwards;
-  }
-}
 
 
 

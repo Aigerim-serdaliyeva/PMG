@@ -1,10 +1,113 @@
 $(document).ready(function () {
   const $loader = $('.loader');
+  var $menu = $(".main-menu");
+  var $hamburger = $(".hamburger");
   const $links = $('.link');
   const $pages = $('.main');
   const $submenu = $('.submenu');
   const $companyLink = $('[href="#company"]').closest('li');
   const submenuList = ["#pmg", "#vision", "#mission", "#goal", "#command"];
+
+
+  /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+  particlesJS.load('particles-js', '../assets/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+
+   // при нажатии на меню плавно скролит к соответсвующему блоку
+  $(".main-menu .link a").click(function (e) {
+    var $href = $(this).attr('href');
+    if ($href.length > 1 && $href.charAt(0) == '#' && $($href).length > 0) {
+      e.preventDefault();
+      // отнимаем высоту шапки, для того чтобы шапка не прикрывала верхнию часть блока
+      var top = $($href).offset().top - headerHeight;
+      $html.stop().animate({ scrollTop: top }, "slow", "swing");
+    }
+
+    // как только доходим до блока, скрываем меню
+    if ($wnd.width() <= 1100) {
+      toggleHamburger();
+    }
+  });
+
+  $hamburger.click(function () {
+    toggleHamburger();
+    return false;
+  });
+
+  // показывает и скрывает меню, а также меняет состояние гамбургера
+  function toggleHamburger() {
+    $this = $hamburger;
+    if (!$this.hasClass("is-active")) {
+      $this.addClass('is-active');
+      $menu.slideDown('700');
+    } else {
+      $this.removeClass('is-active');
+      $menu.slideUp('700');
+    }
+  }
+
+  const pmgAnime = anime.timeline({
+    targets: "pmg-anime",
+    easing: 'linear',
+        
+  })
+
+  pmgAnime 
+  .add({
+    targets: '.dot.one',
+    width: '40px',
+    height: '40px',
+    keyframes: [
+      {
+        top: 'calc(50% - 20px)',
+        right: 'calc(50% - 20px)',
+        duration: 1000,
+      }
+    ]
+    
+  })
+  .add({
+    targets: '.dot.two',
+    width: '40px',
+    height: '40px',
+    keyframes: [
+      {
+        top: 'calc(50% + 45px)',
+        right: 'calc(50% - 20px)',
+        duration: 1000,
+      }
+    ]
+  })
+  .add({
+    targets: '.dot.three',
+    width: '40px',
+    height: '40px',
+    keyframes: [
+      {
+        top: 'calc(50% + 125px)',
+        right: 'calc(50% - 20px)',
+        duration: 1000,
+      }
+    ]
+  })
+  .add({
+    targets: '.dot.four',
+    width: '40px',
+    height: '40px',
+    keyframes: [
+      {
+        top: 'calc(50% + 190px)',
+        right: 'calc(50% - 20px)',
+        duration: 1000,
+      }
+    ]
+  })
+  .add({
+    targets: '.text-one',
+    // opacity: 1
+  })
+
 
   const projectAnime = anime({
     targets: ".project-anime",
@@ -13,7 +116,8 @@ $(document).ready(function () {
     keyframes: [
       {
         width: '128px',
-        height: '128px',
+        height: '128px',        
+        opacity: 1,
         top: 'calc(50% - 64px)',
         right: 'calc(50% - 64px)',
         duration: 2000,
@@ -33,7 +137,7 @@ $(document).ready(function () {
     targets: '.service-anime__item',
     delay: 2000,
     loop: true,
-    autoplay: false,
+    // autoplay: false,
     easing: 'easeInOutSine',
     keyframes: [
       {
@@ -59,7 +163,7 @@ $(document).ready(function () {
     loop: true,
     easing: 'easeInOutSine',
     endDelay: 1000,
-    autoplay: false,
+    // autoplay: false,
     keyframes: [
       {
         opacity: 1,
@@ -72,6 +176,102 @@ $(document).ready(function () {
       }
     ]
   });
+
+  const advantageAnime = anime.timeline({
+    targets: ".advantage-anime",
+    easing: 'linear',
+    autoplay: false
+  });
+  advantageAnime
+  .add({
+    targets: '.dot.first',
+    opacity: {
+      value: 1,
+      duration: 250
+    },
+    duration: 250
+  })
+  .add({
+    targets: '.line.one img',
+    opacity: {
+      value: 1,
+      duration: 300
+    },
+    duration: 300
+  })
+  .add({
+    targets: '.dot.second',
+    opacity: {
+      value: 1,
+      duration: 250
+    },
+    duration: 250
+  })
+  .add({
+    targets: '.line.two img',
+    opacity: {
+      value: 1,
+      duration: 300
+    },
+    duration: 300
+  })
+  .add({
+    targets: '.dot.third',
+    opacity: {
+      value: 1,
+      duration: 250
+    },
+    duration: 250
+  })
+  .add({
+    targets: '.line.three img',
+    opacity: {
+      value: 1,
+      duration: 300
+    },
+    duration: 300
+  })
+  .add({
+    targets: '.dot.fourth',
+    opacity: {
+      value: 1,
+      duration: 250
+    },
+    duration: 250
+  })
+  .add({
+    targets: '.text-first',
+    opacity: {
+      value: 1,
+      duration: 350
+    },
+    duration: 350
+  })
+  .add({
+    targets: '.text-second',
+    opacity: {
+      value: 1,
+      duration: 350
+    },
+    duration: 350
+  })
+  .add({
+    targets: '.text-third',
+    opacity: {
+      value: 1,
+      duration: 350
+    },
+    duration: 350
+  })
+  .add({
+    targets: '.text-fourth',
+    opacity: {
+      value: 1,
+      duration: 350
+    },
+    duration: 350
+  })
+
 
   $loader.addClass('d-none');
   showPage(location.hash);
@@ -122,123 +322,13 @@ $(document).ready(function () {
       serviceAnime.pause();
       serviceAnimeText.pause();
     }
+
+    if (route === "#advantage") {
+      advantageAnime.restart();
+    } else {
+      advantageAnime.pause();
+    }
   }
-
-
-    // modified version of random-normal
-  // function normalPool(o){var r=0;do{var a=Math.round(normal({mean:o.mean,dev:o.dev}));if(a<o.pool.length&&a>=0)return o.pool[a];r++}while(r<100)}function randomNormal(o){if(o=Object.assign({mean:0,dev:1,pool:[]},o),Array.isArray(o.pool)&&o.pool.length>0)return normalPool(o);var r,a,n,e,l=o.mean,t=o.dev;do{r=(a=2*Math.random()-1)*a+(n=2*Math.random()-1)*n}while(r>=1);return e=a*Math.sqrt(-2*Math.log(r)/r),t*e+l}
-
-  // const NUM_PARTICLES = 600;
-  // const PARTICLE_SIZE = 0.5; // View heights
-  // const SPEED = 20000; // Milliseconds
-
-  // let particles = [];
-
-  // function rand(low, high) {
-  //   return Math.random() * (high - low) + low;
-  // }
-
-  // function createParticle(canvas) {
-  //   const colour = {
-  //     r: 255,
-  //     g: randomNormal({ mean: 125, dev: 20 }),
-  //     b: 50,
-  //     a: rand(0, 1),
-  //   };
-  //   return {
-  //     x: -2,
-  //     y: -2,
-  //     diameter: Math.max(0, randomNormal({ mean: PARTICLE_SIZE, dev: PARTICLE_SIZE / 2 })),
-  //     duration: randomNormal({ mean: SPEED, dev: SPEED * 0.1 }),
-  //     amplitude: randomNormal({ mean: 16, dev: 2 }),
-  //     offsetY: randomNormal({ mean: 0, dev: 10 }),
-  //     arc: Math.PI * 2,
-  //     startTime: performance.now() - rand(0, SPEED),
-  //     colour: `rgba(${colour.r}, ${colour.g}, ${colour.b}, ${colour.a})`,
-  //   }
-  // }
-
-  // function moveParticle(particle, canvas, time) {
-  //   const progress = ((time - particle.startTime) % particle.duration) / particle.duration;
-  //   return {
-  //     ...particle,
-  //     x: progress,
-  //     y: ((Math.sin(progress * particle.arc) * particle.amplitude) + particle.offsetY),
-  //   };
-  // }
-
-  // function drawParticle(particle, canvas, ctx) {
-  //   canvas = document.getElementById('particle-canvas');
-  //   const vh = canvas.height / 100;
-
-  //   ctx.fillStyle = particle.colour;
-  //   ctx.beginPath();
-  //   ctx.ellipse(
-  //     particle.x * canvas.width,
-  //     particle.y * vh + (canvas.height / 2),
-  //     particle.diameter * vh,
-  //     particle.diameter * vh,
-  //     0,
-  //     0,
-  //     2 * Math.PI
-  //   );
-  //   ctx.fill();
-  // }
-
-  // function draw(time, canvas, ctx) {
-  //   // Move particles
-  //   particles.forEach((particle, index) => {
-  //     particles[index] = moveParticle(particle, canvas, time);
-  //   })
-
-  //   // Clear the canvas
-  //   ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  //   // Draw the particles
-  //   particles.forEach((particle) => {
-  //     drawParticle(particle, canvas, ctx);
-  //   })
-
-  //   // Schedule next frame
-  //   requestAnimationFrame((time) => draw(time, canvas, ctx));
-  // }
-
-  // function initializeCanvas() {
-  //   let canvas = document.getElementById('particle-canvas');
-  //   canvas.width = canvas.offsetWidth * window.devicePixelRatio;
-  //   canvas.height = canvas.offsetHeight * window.devicePixelRatio;
-  //   let ctx = canvas.getContext("2d");
-
-  //   window.addEventListener('resize', () => {
-  //     canvas.width = canvas.offsetWidth * window.devicePixelRatio;
-  //     canvas.height = canvas.offsetHeight * window.devicePixelRatio;
-  //     ctx = canvas.getContext("2d");
-  //   })
-
-  //   return [canvas, ctx];
-  // }
-
-  // function startAnimation() {
-  //   const [canvas, ctx] = initializeCanvas();
-
-  //   // Create a bunch of particles
-  //   for (let i = 0; i < NUM_PARTICLES; i++) {
-  //     particles.push(createParticle(canvas));
-  //   }
-    
-  //   requestAnimationFrame((time) => draw(time, canvas, ctx));
-  // };
-
-  // // Start animation when document is loaded
-  // (function () {
-  //   if (document.readystate !== 'loading') {
-  //     startAnimation();
-  //   } else {
-  //     document.addEventListener('DOMContentLoaded', () => {
-  //       startAnimation();
-  //     })
-  //   }
-  // }());
 
 });
 
