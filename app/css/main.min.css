@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'OpenSans';
-  src: url("../fonts/OpenSans/Regular/OpenSans-Regular" normal); }
+  src: url("../fonts/OpenSans/Regular/OpenSans-Regular", normal); }
 
 * {
   -webkit-box-sizing: border-box;
@@ -394,6 +394,15 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   background-color: #F7F7F7; }
 
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 290px;
+  z-index: 98;
+  background: red; }
+
 #particles-js {
   position: absolute;
   top: -20%;
@@ -736,25 +745,11 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden; }
 
 .pmg-anime .dot {
-  width: 10px;
-  height: 10px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #004C36;
-  margin-bottom: 25px;
-  position: absolute;
-  opacity: 0; }
-  .pmg-anime .dot.one {
-    bottom: 10%;
-    left: 5px; }
-  .pmg-anime .dot.two {
-    top: 8%;
-    right: 48%; }
-  .pmg-anime .dot.three {
-    right: 2%;
-    bottom: 15%; }
-  .pmg-anime .dot.four {
-    bottom: 0;
-    left: 25%; }
+  position: absolute; }
   .pmg-anime .dot span {
     position: absolute;
     left: 60px;

@@ -14,100 +14,24 @@ $(document).ready(function () {
     console.log('callback - particles.js config loaded');
   });
 
-   // при нажатии на меню плавно скролит к соответсвующему блоку
-  $(".main-menu .link a").click(function (e) {
-    var $href = $(this).attr('href');
-    if ($href.length > 1 && $href.charAt(0) == '#' && $($href).length > 0) {
-      e.preventDefault();
-      // отнимаем высоту шапки, для того чтобы шапка не прикрывала верхнию часть блока
-      var top = $($href).offset().top - headerHeight;
-      $html.stop().animate({ scrollTop: top }, "slow", "swing");
-    }
 
-    // как только доходим до блока, скрываем меню
-    if ($wnd.width() <= 1100) {
-      toggleHamburger();
-    }
-  });
-
-  $hamburger.click(function () {
-    toggleHamburger();
-    return false;
-  });
-
-  // показывает и скрывает меню, а также меняет состояние гамбургера
-  function toggleHamburger() {
-    $this = $hamburger;
-    if (!$this.hasClass("is-active")) {
-      $this.addClass('is-active');
-      $menu.slideDown('700');
-    } else {
-      $this.removeClass('is-active');
-      $menu.slideUp('700');
-    }
-  }
-
-  const pmgAnime = anime.timeline({
-    targets: "pmg-anime",
+  const pmgAnime = anime({
+    targets: '.pmg-anime .dot',
+    duration: 2000,
     easing: 'linear',
-        
-  })
+    autoplay: false,
+    left: '50%',
+    top: (el, i) => `calc(50% - 117px + ${ i * 65 }px)`
+  });
 
-  pmgAnime 
-  .add({
-    targets: '.dot.one',
-    width: '40px',
-    height: '40px',
-    keyframes: [
-      {
-        top: 'calc(50% - 20px)',
-        right: 'calc(50% - 20px)',
-        duration: 1000,
-      }
-    ]
-    
-  })
-  .add({
-    targets: '.dot.two',
-    width: '40px',
-    height: '40px',
-    keyframes: [
-      {
-        top: 'calc(50% + 45px)',
-        right: 'calc(50% - 20px)',
-        duration: 1000,
-      }
-    ]
-  })
-  .add({
-    targets: '.dot.three',
-    width: '40px',
-    height: '40px',
-    keyframes: [
-      {
-        top: 'calc(50% + 125px)',
-        right: 'calc(50% - 20px)',
-        duration: 1000,
-      }
-    ]
-  })
-  .add({
-    targets: '.dot.four',
-    width: '40px',
-    height: '40px',
-    keyframes: [
-      {
-        top: 'calc(50% + 190px)',
-        right: 'calc(50% - 20px)',
-        duration: 1000,
-      }
-    ]
-  })
-  .add({
-    targets: '.text-one',
-    // opacity: 1
-  })
-
+  const pmgAnimeText = anime({
+    targets: '.pmg-anime .dot-text',
+    duration: 500,
+    delay: (el,i) => 2000 + i * 500,
+    opacity: 1,
+    autoplay: false,
+    easing: 'linear',
+  });
 
   const projectAnime = anime({
     targets: ".project-anime",
@@ -276,7 +200,8 @@ $(document).ready(function () {
   $loader.addClass('d-none');
   showPage(location.hash);
 
-  $links.click( function() {
+  $links.click( function(e) {
+    e.stopPropagation();
     const route = $(this).find('a').attr("href");
     showPage(route);
   });

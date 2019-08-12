@@ -8,6 +8,16 @@
   background-color: #F7F7F7;
 }
 
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 290px;
+  z-index: 98;
+  background: red;
+}
+
 #particles-js {
   position: absolute;
   top: -20%;
@@ -374,33 +384,33 @@
 
 .pmg-anime {
   .dot {
-    width: 10px;
-    height: 10px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: $accent;
-    margin-bottom: 25px;
+    // margin-bottom: 25px;
     position: absolute;
-    opacity: 0;
+    // opacity: 0;
 
-    &.one {
-      bottom: 10%;
-      left: 5px;
-    }
+    // &.one {
+    //   top: 0; //10%;
+    //   left: 0; // 5px;
+    // }
 
-    &.two {
-      top: 8%;
-      right: 48%;
-    }
+    // &.two {
+    //   top: 0; //8%;
+    //   left: calc(100% - 40px); // 48%;
+    // }
 
-    &.three {
-      right: 2%;
-      bottom: 15%;
-    }
+    // &.three {
+    //   left: 0; // 2%;
+    //   top: calc(100% - 40px); //15%;
+    // }
 
-    &.four {
-      bottom: 0;
-      left: 25%;
-    }
+    // &.four {
+    //   top: 100%;// calc(100% - 40px);
+    //   left: 100%;// calc(100% - 40px);
+    // }
 
     span {
       position: absolute;
