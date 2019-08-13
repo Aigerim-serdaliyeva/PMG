@@ -4,7 +4,10 @@ $(document).ready(function () {
   var $hamburger = $(".hamburger");
   const $links = $('.link');
   const $pages = $('.main');
+  const $header = $('.header');
+  const $burger = $('.burger');
   const $submenu = $('.submenu');
+  const $overlay = $('.burger-menu-overlay')
   const $companyLink = $('[href="#company"]').closest('li');
   const submenuList = ["#pmg", "#vision", "#mission", "#goal", "#command"];
 
@@ -14,13 +17,51 @@ $(document).ready(function () {
     console.log('callback - particles.js config loaded');
   });
 
+  
+  $burger.click( function() {
+    $(this).toggleClass('burger__active')
+
+    if ($burger.hasClass('burger__active')) {
+      $(this).closest('.page-wrapper').find('.header').toggleClass('d-block')
+    } 
+  }) 
+
+  // function burgerMenu(selector) {
+  //   let menu = $(selector);
+  //   let button = menu.find('.burger');
+  //   let links = menu.closest('.page-wrapper').find('.link');
+  //   // let links = menu.find(".link");
+  //   let overlay = menu.find('.burger-menu-overlay');
+
+  //   button.on('click', (e) => {
+  //     e.preventDefault();
+  //     toggleMenu();
+  //   })
+
+  //   links.on('click', () => toggleMenu());
+  //   overlay.on('click', () => toggleMenu());
+
+  //   function toggleMenu() {
+  //     menu.toggleClass('burger__active');
+  //     if ($burger.hasClass('burger__active')) {
+  //       $(this).closest('.page-wrapper').find('.header').toggleClass('d-block')
+  //     }
+
+  //     if (menu.hasClass('burger__active')) {
+  //       $('body').css('overflow', 'hidden');
+  //     } else {
+  //       $('body').css('overflow', 'visible');
+  //     }
+  //   }
+  // }
+
 
   const pmgAnime = anime({
     targets: '.pmg-anime .dot',
     duration: 2000,
     easing: 'linear',
     autoplay: false,
-    left: '50%',
+    left: '35%',
     top: (el, i) => `calc(50% - 117px + ${ i * 65 }px)`
   });
 
@@ -57,11 +98,54 @@ $(document).ready(function () {
     delay: (el,i) => i * 2500
   });
 
+  // const triangleConfig = {
+  //   delay: 2000,
+  //   loop: true,
+  //   // autoplay: false,
+  //   easing: 'easeInOutSine',
+  //   keyframes: [
+  //     {
+  //       rotate: '+=120deg',
+  //       duration: 1000,
+  //       endDelay: 2000
+  //     },
+  //     {
+  //       rotate: '+=120deg',
+  //       duration: 1000,
+  //       endDelay: 2000
+  //     },
+  //     {
+  //       rotate: '+=120deg',
+  //       duration: 1000
+  //     }
+  //   ]
+  // };
+
+  // const triangleConfigText = {
+  //   delay: anime.stagger(3000),
+  //   loop: true,
+  //   easing: 'easeInOutSine',
+  //   endDelay: 1000,
+  //   autoplay: false,
+  //   keyframes: [
+  //     {
+  //       opacity: 1,
+  //       duration: 500,
+  //       endDelay: 1000
+  //     },
+  //     {
+  //       opacity: 0,
+  //       duration: 500
+  //     }
+  //   ]
+  // };
+
+  
   const serviceAnime = anime({
     targets: '.service-anime__item',
     delay: 2000,
     loop: true,
-    // autoplay: false,
+    autoplay: false,
     easing: 'easeInOutSine',
     keyframes: [
       {
@@ -87,7 +171,52 @@ $(document).ready(function () {
     loop: true,
     easing: 'easeInOutSine',
     endDelay: 1000,
-    // autoplay: false,
+    autoplay: false,
+    keyframes: [
+      {
+        opacity: 1,
+        duration: 500,
+        endDelay: 1000
+      },
+      {
+        opacity: 0,
+        duration: 500
+      }
+    ]
+  });
+
+
+  const visionAnime = anime({
+    targets: '.vision-anime__item',
+    delay: 2000,
+    loop: true,
+    autoplay: false,
+    easing: 'easeInOutSine',
+    keyframes: [
+      {
+        rotate: '+=120deg',
+        duration: 1000,
+        endDelay: 2000
+      },
+      {
+        rotate: '+=120deg',
+        duration: 1000,
+        endDelay: 2000
+      },
+      {
+        rotate: '+=120deg',
+        duration: 1000
+      }
+    ]
+  });
+
+  const visionAnimeText = anime({
+    targets: '.vision-anime__text',
+    delay: anime.stagger(3000),
+    loop: true,
+    easing: 'easeInOutSine',
+    endDelay: 1000,
+    autoplay: false,
     keyframes: [
       {
         opacity: 1,
@@ -205,8 +334,6 @@ $(document).ready(function () {
     const route = $(this).find('a').attr("href");
     showPage(route);
   });
-  
-
 
   function showPage(route) {
 
@@ -240,12 +367,28 @@ $(document).ready(function () {
       projectAnime.pause();
     }
 
+    if (route === "#pmg") {
+      pmgAnime.restart();
+      pmgAnimeText.restart();
+    } else {
+      pmgAnime.pause();
+      pmgAnimeText.pause();
+    }
+
     if (route === "#service") {
       serviceAnime.restart();
       serviceAnimeText.restart();
     } else {
       serviceAnime.pause();
       serviceAnimeText.pause();
+    }
+
+    if (route === "#vision") {
+      visionAnime.restart();
+      visionAnimeText.restart();
+    } else {
+      visionAnime.pause();
+      visionAnimeText.pause();
     }
 
     if (route === "#advantage") {

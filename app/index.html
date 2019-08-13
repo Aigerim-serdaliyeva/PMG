@@ -41,75 +41,71 @@
     <div class="loader__content">Loading....</div>
   </div>
 
-  <nav id="mobile-menu">
-    <ul>
-      <li class="link">
-        <a href="#company">О компании</a>
-        <ul>
-          <li class="link">
-            <a href="#pmg">P M G</a>
-          </li>
-          <li class="link">
-            <a href="#vision">Наше видение</a>
-          </li>
-          <li class="link">
-            <a href="#mission">Миссия компании</a>
-          </li>
-          <li class="link">
-            <a href="#goal">Наша цель</a>
-          </li>
-          <li class="link">
-            <a href="#command">Наша команда</a>
-          </li>
-        </ul>
-      </li>
-      <li class="link">
-        <a href="#advantage">Преимущества</a>
-      </li>
-      <li class="link">
-        <a href="#service">Услуги</a>
-      </li>
-      <li class="link">
-        <a href="#project">Проекты</a>
-      </li>
-      <li class="link">
-        <a href="#contact">Контакты</a>
-      </li>
-    </ul>
-  </nav>
-
   <div class="page-wrapper">
 
-    <nav class="header">
+    <div class="header-mobile">
+
+      <div class="burger-menu">
+        <a href="#" class="burger">
+          <span class="burger-menu__lines"></span>
+        </a>
+
+        <div class="burger-menu__overlay"></div>
+      </div>
+      
+      <a href="/" class="logo">
+        <img src="./img/logo-mobile.png" alt="">
+      </a>
+    </div>
+
+    <nav class="header ">
+      <!-- <a class="arrow-menu"><img src="./img/arrow-left.png" alt=""></a> -->
+
       <div class="header__content">
         <a href="/" class="logo">
           <img src="./img/logo.png" alt="">
         </a>
 
-        <div class="rombs">
-          <div class="romb"></div>
-          <div class="romb"></div>
-          <div class="romb"></div>
+        <div class="header__lang">
+          <div class="rombs">
+            <div class="romb"></div>
+            <div class="romb"></div>
+            <div class="romb"></div>
+          </div>
+  
+          <div class="header__language">
+            <a href="#kz" class="lang">KZ</a>\
+            <a href="#ru" class="lang">RU</a>\
+            <a href="#en" class="lang">EN</a>                        
+          </div>
         </div>
 
-        <div class="header__language">
-          <a href="#kz" class="lang">KZ</a>\
-          <a href="#ru" class="lang">RU</a>\
-          <a href="#en" class="lang">EN</a>                        
-        </div>
-
+        <a class="side"><span>Menu</span></a>
+        
       </div>
-
-      <button class="hamburger hamburger--elastic hamburger--accessible">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
       
       <div class="main-menu">
         <ul>
           <li class="link">
             <a href="#company">О компании</a>
+
+            <ul class="submenu-mobile">
+              <li class="link">
+                <a href="#pmg">P M G</a>
+              </li>
+              <li class="link">
+                <a href="#vision">Наше видение</a>
+              </li>
+              <li class="link">
+                <a href="#mission">Миссия компании</a>
+              </li>
+              <li class="link">
+                <a href="#goal">Наша цель</a>
+              </li>
+              <li class="link">
+                <a href="#command">Наша команда</a>
+              </li>
+            </ul>
           </li>
           <li class="link">
             <a href="#advantage">Преимущества</a>
@@ -212,20 +208,21 @@
           </div>          
         </div>
         <div class="figure">
-          <!-- <div class="service-anime">
-            <div class="service-anime__item">
-              <div class="service-anime__dot"></div>
-              <div class="service-anime__text">Совместный рост</div>
+          <!-- <div id="particles-js"></div> -->
+          <div class="vision-anime">
+            <div class="vision-anime__item">
+              <div class="vision-anime__dot"></div>
+              <div class="vision-anime__text">Совместный рост</div>
             </div>
-            <div class="service-anime__item" style="transform: rotate(240deg)">
-              <div class="service-anime__dot"></div>
-              <div class="service-anime__text">Уверенность</div>
+            <div class="vision-anime__item" style="transform: rotate(240deg)">
+              <div class="vision-anime__dot"></div>
+              <div class="vision-anime__text">Уверенность</div>
             </div>
-            <div class="service-anime__item" style="transform: rotate(120deg)">
-              <div class="service-anime__dot"></div>
-              <div class="service-anime__text">Успех</div>
+            <div class="vision-anime__item" style="transform: rotate(120deg)">
+              <div class="vision-anime__dot"></div>
+              <div class="vision-anime__text">Успех</div>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
 
@@ -246,6 +243,7 @@
           </div>          
         </div>
         <div class="figure">
+          
         </div>
       </div>
 
@@ -324,7 +322,8 @@
             <div class="main__text__center">Собственный бизнес – способ повысить уровень жизни, привнося пользу себе и обществу в целом.</div>
           </div>          
         </div>
-        <div class="figure">
+        <div class="figure">          
+          <div id="particles-js"></div>
           <div class="service-anime">
             <div class="service-anime__item">
               <div class="service-anime__dot"></div>
@@ -381,6 +380,7 @@
           </div>         
         </div>
         <div class="figure">
+          <div id="particles-js"></div>
           <img src="./img/top-security-green.png" alt="" class="project-anime">
           <img src="./img/muratov-market-green.png" alt="" class="project-anime">
           <img src="./img/muratov-partners-green.png" alt="" class="project-anime">

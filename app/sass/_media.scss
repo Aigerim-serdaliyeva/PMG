@@ -95,46 +95,231 @@
         height: auto;
     }
 
-    .hamburger {
-        display: block;
-    }  
-
     .header {
-        width: 100%;
-        flex-direction: initial;
+        display: flex;
+        position: fixed;
+        z-index: 20;
+        background: #fff;
+        height: 100%;
+        padding: 50px 0;
+        min-width: 220px;
+        overflow-y: auto;
+        left: -100%;
+    }
+
+    .header-mobile {
+        display: block;
     }
 
     .main-menu {
-        display: flex;
+        top: 30%;
+        ul {
+            text-align: left;
+            li {
+                padding: 15px 10px;
+                margin: 0;
+                border: 1px solid #F7F7F7;
+                border-left: none;
+                border-right: none;
+                &::before {
+                    display: none !important;
+                }
+            }
+            a {
+                background: #fff;
+            }
+        }
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    .submenu-mobile {
+        display: block;
         position: relative;
-        background: #fff;
-        a {
-            background: #fff;
+        margin-left: 40px !important;
+        padding-left: 1px !important;
+        margin-top: 15px !important;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            background: #004C36;
+            left: 0;
         }
         li {
-            &::before {
-                display: none !important;
-            }
+            border: none !important;
+            padding: 0 !important;
+            margin-bottom: 20px !important;
+        }
+        a {
+            font-size: 13px;
         }
     }
 
     .main {
         flex-direction: column;
-    }
+        flex-direction: column-reverse;
 
-    .submenu {
-        width: auto;
-        ul {
-            position: relative;
+        &__title {
+            margin-top: 10%;
         }
     }
 
     .content {
         width: 100%;
+        height: auto;
+        // height: 100%;
     }
 
     .figure {
         width: 100%;
         padding: 50px 20px;
+        // height: 100%;
+        height: auto;
     }
+}
+
+@media (max-width: 991px) {
+
+    .main {
+        &__title {
+            margin-top: 5%;
+            font-size: 24px;            
+        }
+        &__service {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        &__content {
+            padding: 8% 3% 4%;
+        }
+    }
+
+    .advantage-anime {
+        .dot {
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+
+    .main {
+        &__title {
+            font-size: 20px;
+            z-index: 0;
+            &::before, &::after {
+                // display: none;
+                width: 100px;
+            }
+            &__text {
+                font-size: 12px;
+            }
+            &--img {
+                img {
+                    max-width: 150px;
+                }
+            }
+        }
+
+        &__text {
+            font-size: 12px;
+            &__center {
+                font-size: 12px;
+            }
+        }
+
+        ul {
+            margin: 15px auto 15px 30px;
+            li {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .figure {
+        // height: 208px;
+    }
+
+    .project {
+        flex-direction: column;
+        padding: 0;
+        &__img {
+            text-align: center;
+            max-width: none;
+            margin-right: 0;
+            padding: 10px;
+            background: #004C36;
+            position: relative;
+            z-index: 0;
+            img {
+                width: 124px;
+                background: #004C36;
+                padding: 0 10px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background: #fff;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: -1;
+                left: 0;
+                right: 0;
+            }
+        }
+        &__block {
+            padding: 30px 15px;
+            margin: 0 auto;
+        }
+        &__text {
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+        &__contact {
+            margin-top: 20px;
+        }
+    }
+
+    .advantage-anime {
+        .dot {
+            width: 18px;
+            height: 18px;
+            &.first, &.third {
+                margin-left: 50px;
+                span {
+                    left: 30px;
+                }
+            }
+            &.second, &.fourth {
+                margin-right: 50px;
+                span {
+                    right: 30px;
+                }
+            }
+
+            span {
+                font-size: 11px;
+            }
+        }
+        .line {
+            width: 31px;
+            margin: 0 auto;
+        }
+    }
+
+    .pmg-anime {
+        .dot {
+            left: 20%;
+        }
+    }
+
 }

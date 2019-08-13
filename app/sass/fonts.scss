@@ -1,6 +1,3 @@
 @import "_mixins/font-face";
 
-@font-face {
-    font-family: 'OpenSans';
-    src: url('../fonts/OpenSans/Regular/OpenSans-Regular', normal)
-}
+@include font-face ("OpenSans", "../fonts/OpenSans/Regular/OpenSans-Regular", normal);
