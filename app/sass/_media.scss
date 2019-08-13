@@ -93,18 +93,25 @@
     .page-wrapper {
         flex-direction: column;
         height: auto;
+        padding-top: 91px;
+    }
+
+    .container {
+      display: block;
     }
 
     .header {
         display: flex;
         position: fixed;
+        top: 0;
+        left: -230px;
         z-index: 20;
         background: #fff;
         height: 100%;
         padding: 50px 0;
         min-width: 220px;
+        width: 220px;
         overflow-y: auto;
-        left: -100%;
     }
 
     .header-mobile {
@@ -112,7 +119,7 @@
     }
 
     .main-menu {
-        top: 30%;
+      position: static;
         ul {
             text-align: left;
             li {
@@ -176,9 +183,19 @@
 
     .figure {
         width: 100%;
-        padding: 50px 20px;
-        // height: 100%;
-        height: auto;
+        padding: 25px 20px;
+        min-height: 210px;
+    }
+
+    .pmg-anime {
+      .dot {
+        width: 18px;
+        height: 18px;
+        span {
+          left: 33px;
+          font-size: 11px;
+        }
+      }
     }
 }
 

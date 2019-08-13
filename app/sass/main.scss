@@ -23,7 +23,7 @@
   height: 50%;
   z-index: -1;
   transform-origin: center;
-  transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);  
 }
 
 .rombs {
@@ -63,9 +63,10 @@
   justify-content: space-between;
   z-index: 3;
   position: relative;
+  transition: left 0.3s;
 
-  &.d-block {
-    left: 0;
+  &--opened {
+    left: 0 !important;
   }
 
   &__content {
@@ -85,43 +86,48 @@
   }
 }
 
-.burger {  
-  position: fixed;
-  top: 30px;
-  left: 20px;
-  z-index: 30;
-  width: 24px;
-  height: 24px;
-  background: transparent;
+.burger-menu {  
+  &--active {
+    .burger-menu {
+      &__lines {
+        background: transparent;
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+        &::after {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+      }
 
-  &__active {
-    .burger-menu__lines {
-      background: transparent;
-      &::before {
-        top: 0;
-        transform: rotate(45deg);
+      &__overlay {
+        display: block;
       }
-      &::after {
-        top: 0;
-        transform: rotate(-45deg);
-      }
-    }
-    .burger-menu__overlay {
-      display: block;
-    }
+    }    
   }
 
-  &-menu__overlay {
+  &__btn {
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    z-index: 30;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+  }
+
+  &__overlay {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
-    z-index: 0;
+    z-index: 10;
   }
     
-  &-menu__lines {
+  &__lines {
     position: absolute;
     width: 24px;
     height: 3px;
@@ -147,10 +153,15 @@
 }
 
 .header-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   text-align: center;
   padding: 20px;
   display: none;
-  position: relative;
+  background-color: #F7F7F7;
+  z-index: 9;
 }
 
 .footer {
@@ -201,7 +212,7 @@
       margin-bottom: 0;
     }
 
-    &.link a:hover, &.active a {
+    &.link > a:hover, &.active > a {
       color: $black      
     }
 
@@ -268,6 +279,7 @@
   flex-grow: 1;
   position: relative;
   z-index: 0;
+  overflow: hidden;
 }
 
 .main {
@@ -469,16 +481,14 @@
     border-radius: 50%;
     background: $accent;
     position: absolute;
-    // opacity: 0;
-
-
+    
     span {
       position: absolute;
       left: 60px;
       font-family: OpenSans;
       font-weight: 600;
       font-size: 18px;
-      line-height: 25px;
+      line-height: 1;
       color: #313131;
       white-space: nowrap;
       top: 50%;
