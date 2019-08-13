@@ -18,11 +18,6 @@
         },
         "polygon": {
           "nb_sides": 3
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 0,
-          "height": 0
         }
       },
       "opacity": {
@@ -55,11 +50,11 @@
       "move": {
         "enable": true,
         "speed": 1,
-        "direction": "bottom",
+        "direction": "left",
         "random": false,
         "straight": false,
         "out_mode": "out",
-        "bounce": false,
+        "bounce": true,
         "attract": {
           "enable": false,
           "rotateX": 6333.477640418815,
