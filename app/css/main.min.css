@@ -1190,6 +1190,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 8px; }
   .main__title {
     font-size: 20px; }
+    .main__title--service span {
+      max-width: 250px; }
     .main__title__text {
       font-size: 12px; }
     .main__title--img img {

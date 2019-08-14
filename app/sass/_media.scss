@@ -358,6 +358,12 @@
     .main {
         &__title {
             font-size: 20px;
+
+            &--service {
+                span {
+                    max-width: 250px;
+                }
+            }
             
             &__text {
                 font-size: 12px;

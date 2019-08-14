@@ -150,10 +150,10 @@ const messages = {
             li4: "supervision.",
             text2: "Everyone is able to broaden the scope and embrace new opportunities, ",
             text3: "We know how to reach it and do moving beyond.",
-            anime1: "",
-            anime2: "",
-            anime3: "",
-            anime4: ""
+            anime1: "Business escort",
+            anime2: "Investments",
+            anime3: "Development strategy",
+            anime4: "Direction control"
         },
 
         vision: {
@@ -164,9 +164,9 @@ const messages = {
             span2: "We create better tomorrow by means of today.",
             text3: "In addition to leadership, we focus on searching right people, whose priorities and ambitions are coincide with ours.",
             visionText: "We do not just offer perspective resources, but sense of confidence, cooperative growth and success.",
-            anime1: "",
-            anime2: "",
-            anime3: ""
+            anime1: "Joint growth",
+            anime2: "Confidence",
+            anime3: "Success"
         },
 
         mission: {
@@ -176,9 +176,9 @@ const messages = {
             text2: "The Company’s philosophy is – to develop and make progress. Contributing to the success of the way we work, with whom we work and for whom we work - our business places a",
             span2: "premium on the global improvement of the society state. ",
             text3: "Every achievement leads to the success of the company, and every success leads to the well-being of the nation.",
-            anime1: "",
-            anime2: "",
-            anime3: ""
+            anime1: "Work synergistically",
+            anime2: "Think big",
+            anime3: "Act proactively"
         },
 
         goal: {
@@ -187,9 +187,9 @@ const messages = {
             text2: "Establishment of progress standard is achieved by combining the right people and their visionary thinking.",
             text3: "Our mutual vision is the beginning. Our cooperation is the development. Mutual achieving goals are the success.",
             goalText: "«Энтузиаст меняет себя, команда энтузиастов – мир»",
-            anime1: "",
-            anime2: "",
-            anime3: ""
+            anime1: "Start",
+            anime2: "Development",
+            anime3: "Success"
         },
 
         command: {
@@ -207,10 +207,10 @@ const messages = {
             text3: "– money provides benefit when they “are active”. We create a route to financial well-being through proper disposal of funds.",
             span4: "Our guarantees",
             text4: " are the transparent terms of cooperation and protection of your finances, high safety of investment.",
-            anime1: "",
-            anime2: "",
-            anime3: "",
-            anime4: ""
+            anime1: "Great shots",
+            anime2: "Complex projects",
+            anime3: "Well-being",
+            anime4: "Security"
         },
 
         service: {
