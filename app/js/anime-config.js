@@ -140,9 +140,18 @@ if (windowSize < mobileSize) {
       {
         width: '90px',
         height: '90px',    
+        opacity: 1,
         top: 'calc(50% - 45px)',
-        right: 'calc(50% - 45px)'
+        right: 'calc(50% - 45px)',
+        duration: 2000,
+        easing: 'easeOutElastic(1, .4)'
       },
+      {
+        rotate: '1turn',
+        scale: 0,
+        duration: 500,
+        easing: 'linear'
+      }
     ],
   }
 }
