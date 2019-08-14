@@ -87,6 +87,7 @@
 }
 
 .burger-menu {  
+  display: none;
   &--active {
     .burger-menu {
       &__lines {
@@ -162,6 +163,7 @@
   display: none;
   background-color: #F7F7F7;
   z-index: 9;
+  // z-index: 21;
 }
 
 .footer {
@@ -312,6 +314,9 @@
     
     &--service {
       margin-top: 17%;
+      span {
+        max-width: 380px;
+      }
     }
 
     span {      
@@ -345,9 +350,8 @@
     span {
       font-weight: bold;
     }
-    &__center {
+    &--center {
       text-align: center;
-      font-size: 18px;
       font-weight: bold;
     }
   }
@@ -428,6 +432,15 @@
     line-height: 19px;
   }
 
+  &__contact {
+    font-weight: bold;
+    line-height: 19px;
+    margin-top: 5px;
+    span {
+      font-weight: normal;
+    }
+  }
+
   .more {
     font-weight: bold;
     font-size: 13px;
@@ -456,11 +469,6 @@
   &--max {
     width: 54.6%;
   }
-}
-
-.pmg-img {
-  text-align: center;
-  margin-top: 32.5%;
 }
 
 .figure {
@@ -508,7 +516,65 @@
 }
 
 .vision-anime {
-  position: relative;
+  // position: relative;
+  position: absolute;
+  left: 40%;
+  &__item {
+    position: absolute;
+    padding-left: 15px;
+    transform-origin: 0% 50%;
+  }
+  &__dot {
+    width: 40px;
+    height: 40px;
+    background: $accent;
+    border-radius: 50%;
+  }
+  &__text {
+    position: absolute;
+    width: 254px;
+    font-size: 24px;
+    color: #313131;
+    font-family: OpenSans, serif;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 65px;
+    opacity: 0;
+  }
+}
+
+.mission-anime {
+  // position: relative;
+  position: absolute;
+  left: 40%;
+  &__item {
+    position: absolute;
+    padding-left: 15px;
+    transform-origin: 0% 50%;
+  }
+  &__dot {
+    width: 40px;
+    height: 40px;
+    background: $accent;
+    border-radius: 50%;
+  }
+  &__text {
+    position: absolute;
+    width: 254px;
+    font-size: 24px;
+    color: #313131;
+    font-family: OpenSans, serif;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 65px;
+    opacity: 0;
+  }
+}
+
+.goal-anime {
+  // position: relative;
+  position: absolute;
+  left: 40%;
   &__item {
     position: absolute;
     padding-left: 15px;
@@ -534,7 +600,9 @@
 }
 
 .service-anime {
-  position: relative;
+  // position: relative;
+  position: absolute;
+  left: 40%;
   &__item {
     position: absolute;
     padding-left: 15px;
@@ -604,6 +672,29 @@
     }
   }
   
+}
+
+.contact {
+  font-family: OpenSans;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  font-weight: bold;  
+  margin-top: 32.5%;
+  span {
+    font-weight: normal;
+  }
+  .pmg-img {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  & > *{
+    margin-bottom: 8px;
+  }
+}
+
+.map {
+  // z-index: 5;
 }
 
 

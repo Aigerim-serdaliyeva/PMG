@@ -1,4 +1,7 @@
-$(document).ready(function () {
+
+
+
+const jqueryApp = $(document).ready(function () {
   const $loader = $('.loader');
   var $menu = $(".main-menu");
   var $hamburger = $(".hamburger");
@@ -29,35 +32,6 @@ $(document).ready(function () {
     closeMenu();
   })
   
-  // function burgerMenu(selector) {
-  //   let menu = $(selector);
-  //   let button = menu.find('.burger');
-  //   let links = menu.closest('.page-wrapper').find('.link');
-  //   // let links = menu.find(".link");
-  //   let overlay = menu.find('.burger-menu-overlay');
-
-  //   button.on('click', (e) => {
-  //     e.preventDefault();
-  //     toggleMenu();
-  //   })
-
-  //   links.on('click', () => toggleMenu());
-  //   overlay.on('click', () => toggleMenu());
-
-  //   function toggleMenu() {
-  //     menu.toggleClass('burger__active');
-  //     if ($burger.hasClass('burger__active')) {
-  //       $(this).closest('.page-wrapper').find('.header').toggleClass('d-block')
-  //     }
-
-  //     if (menu.hasClass('burger__active')) {
-  //       $('body').css('overflow', 'hidden');
-  //     } else {
-  //       $('body').css('overflow', 'visible');
-  //     }
-  //   }
-  // }
-
   function showMenu() {
     $header.addClass('header--opened');
     $burgerMenu.addClass('burger-menu--active');
@@ -72,78 +46,43 @@ $(document).ready(function () {
   const pmgAnime = anime(pmgAnimeConfig);
   const pmgAnimeText = anime(pmgAnimeConfigText);
 
-  const projectAnime = anime({
-    targets: ".project-anime",
-    loop: true,
-    autoplay: false,
-    keyframes: [
-      {
-        width: '128px',
-        height: '128px',        
-        opacity: 1,
-        top: 'calc(50% - 64px)',
-        right: 'calc(50% - 64px)',
-        duration: 2000,
-        easing: 'easeOutElastic(1, .4)'
-      },
-      {
-        rotate: '1turn',
-        scale: 0,
-        duration: 500,
-        easing: 'linear'
-      }
-    ],
-    delay: (el,i) => i * 2500
-  });
+  const projectAnime = anime(projectAnimeConfig);
 
-  // const triangleConfig = {
-  //   delay: 2000,
+  // const projectAnime = anime({
+  //   targets: ".project-anime",
   //   loop: true,
-  //   // autoplay: false,
-  //   easing: 'easeInOutSine',
-  //   keyframes: [
-  //     {
-  //       rotate: '+=120deg',
-  //       duration: 1000,
-  //       endDelay: 2000
-  //     },
-  //     {
-  //       rotate: '+=120deg',
-  //       duration: 1000,
-  //       endDelay: 2000
-  //     },
-  //     {
-  //       rotate: '+=120deg',
-  //       duration: 1000
-  //     }
-  //   ]
-  // };
-
-  // const triangleConfigText = {
-  //   delay: anime.stagger(3000),
-  //   loop: true,
-  //   easing: 'easeInOutSine',
-  //   endDelay: 1000,
   //   autoplay: false,
   //   keyframes: [
   //     {
+  //       width: '128px',
+  //       height: '128px',        
   //       opacity: 1,
-  //       duration: 500,
-  //       endDelay: 1000
+  //       top: 'calc(50% - 64px)',
+  //       right: 'calc(50% - 64px)',
+  //       duration: 2000,
+  //       easing: 'easeOutElastic(1, .4)'
   //     },
   //     {
-  //       opacity: 0,
-  //       duration: 500
+  //       rotate: '1turn',
+  //       scale: 0,
+  //       duration: 500,
+  //       easing: 'linear'
   //     }
-  //   ]
-  // };
-
+  //   ],
+  //   delay: (el,i) => i * 2500
+  // });
   
   const serviceAnime = anime(serviceAnimeConfig);
   const serviceAnimeText = anime(serviceAnimeTextConfig);
 
   const visionAnime = anime(visionAnimeConfig);
   const visionAnimeText = anime(visionAnimeTextConfig);
+
+  const missionAnime = anime(missionAnimeConfig);
+  const missionAnimeText = anime(missionAnimeTextConfig);
+
+  const goalAnime = anime(goalAnimeConfig);
+  const goalAnimeText = anime(goalAnimeTextConfig);
 
   const advantageAnime = anime.timeline({
     targets: ".advantage-anime",
@@ -307,6 +246,22 @@ $(document).ready(function () {
       visionAnimeText.pause();
     }
 
+    if (route === "#mission") {
+      missionAnime.restart();
+      missionAnimeText.restart();
+    } else {
+      missionAnime.pause();
+      missionAnimeText.pause();
+    }
+
+    if (route === "#goal") {
+      goalAnime.restart();
+      goalAnimeText.restart();
+    } else {
+      goalAnime.pause();
+      goalAnimeText.pause();
+    }
+
     if (route === "#advantage") {
       advantageAnime.restart();
     } else {
@@ -317,3 +272,20 @@ $(document).ready(function () {
 });
 
 
+  // Internalization
+      
+  const i18n = new VueI18n({
+    locale: 'ru', // set locale
+    messages, // set locale messages
+  })      
+
+  new Vue({ 
+    el: '#app',
+    i18n,
+    methods: {
+      changeLang(lang) {
+        this.$root.$i18n.locale = lang  
+      }
+    }      
+  })
+  // Internalization end

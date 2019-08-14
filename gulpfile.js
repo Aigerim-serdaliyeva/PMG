@@ -69,7 +69,10 @@ gulp.task('libs-js', function () {
    'node_modules/owl.carousel/dist/owl.carousel.min.js',
    'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
    'node_modules/animejs/lib/anime.min.js',
-   'node_modules/particles.js/particles.js'
+   'node_modules/particles.js/particles.js',
+  //  'node_modules/vue/dist/vue.js',
+   'node_modules/vue/dist/vue.min.js',
+  'node_modules/vue-i18n/dist/vue-i18n.min.js'    
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify()) // Минимизировать весь js (на выбор)

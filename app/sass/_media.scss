@@ -51,7 +51,6 @@
         }
     }
 
-
     .main-menu {
         li {
             margin-bottom: 15px;
@@ -87,17 +86,31 @@
             margin-right: 20px;
         }
     }
+
+    .contact {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 1100px) {
     .page-wrapper {
         flex-direction: column;
         height: auto;
-        padding-top: 91px;
+        // padding-top: 91px;
+    }
+
+    .particles {
+        top: 15%;
+        left: 45%;
+        height: 40%;
     }
 
     .container {
       display: block;
+    }
+
+    .burger-menu {
+        display: block;
     }
 
     .header {
@@ -108,10 +121,19 @@
         z-index: 20;
         background: #fff;
         height: 100%;
-        padding: 50px 0;
+        padding: 20px 0;
         min-width: 220px;
-        width: 220px;
         overflow-y: auto;
+
+        .logo {
+            img {
+                max-width: 200px;
+            }
+        }
+
+        .rombs {
+            margin: 8px auto 3px; 
+        }
     }
 
     .header-mobile {
@@ -123,7 +145,7 @@
         ul {
             text-align: left;
             li {
-                padding: 15px 10px;
+                padding: 8px 5px;
                 margin: 0;
                 border: 1px solid #F7F7F7;
                 border-left: none;
@@ -159,10 +181,11 @@
         li {
             border: none !important;
             padding: 0 !important;
-            margin-bottom: 20px !important;
+            margin-bottom: 10px !important;
         }
         a {
             font-size: 13px;
+            padding: 0 10px;
         }
     }
 
@@ -172,19 +195,69 @@
 
         &__title {
             margin-top: 10%;
+            &::after {
+                display: none;
+            }
+            &--img {
+                &::before {
+                    display: none !important;
+                }
+            }
+            span {
+                padding: 0 10px;
+                background: #004C36;
+                z-index: 1;                  
+            }  
+            &::before {
+                display: block;
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 100%;
+                background: #fff;
+                z-index: 0;
+            }
+        }
+
+        &__content--command {
+            padding: 15% 6%;
         }
     }
 
     .content {
         width: 100%;
         height: auto;
-        // height: 100%;
     }
 
     .figure {
         width: 100%;
         padding: 25px 20px;
         min-height: 210px;
+        margin-top: 91px;
+    }
+
+    .project {
+        max-width: 800px;
+        margin: 0 auto 20px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 100%;
+            left: -200px;
+            background: #044230;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 100%;
+            right: -200px;
+            background: #044230;
+        }
     }
 
     .pmg-anime {
@@ -197,6 +270,18 @@
         }
       }
     }
+
+    .service-anime, .vision-anime, .mission-anime, .goal-anime {
+        top: 40%;
+    }
+
+    .contact {
+        margin: 25% 0;
+        .pmg-img {
+            max-width: 250px;
+            margin: 0 auto 50px;
+        }
+    }
 }
 
 @media (max-width: 991px) {
@@ -204,7 +289,7 @@
     .main {
         &__title {
             margin-top: 5%;
-            font-size: 24px;            
+            font-size: 24px;                               
         }
         &__service {
             font-size: 16px;
@@ -212,6 +297,9 @@
         }
         &__content {
             padding: 8% 3% 4%;
+            &--command {
+                padding: 15% 3% 100%;
+            }
         }
     }
 
@@ -226,15 +314,51 @@
 
 @media (max-width: 767px) {
 
+    .particles {
+        top: 10%;
+        left: 55%;
+        height: 15%;
+        width: 500px;
+    }
+
+    .header {
+        .logo {
+            img {
+                max-width: 150px;
+            }
+        }
+    }
+
+    .main-menu {
+        ul {
+            li {
+                padding: 5px;
+            }
+            a {
+                font-size: 14px;
+            }
+        }
+        .submenu-mobile {
+            margin-top: 10px !important;
+            li {
+                margin-bottom: 5px !important;
+                a {
+                    font-size: 12px !important;
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__follow, &__icons {
+            margin-bottom: 8px;
+        }
+    }
 
     .main {
         &__title {
             font-size: 20px;
-            z-index: 0;
-            &::before, &::after {
-                // display: none;
-                width: 100px;
-            }
+            
             &__text {
                 font-size: 12px;
             }
@@ -260,13 +384,13 @@
         }
     }
 
-    .figure {
-        // height: 208px;
-    }
-
     .project {
         flex-direction: column;
         padding: 0;
+        max-width: 1000px;
+        &::before, &::after {
+            display: none;
+        }
         &__img {
             text-align: center;
             max-width: none;
@@ -337,6 +461,26 @@
         .dot {
             left: 20%;
         }
+    }
+
+    .service-anime, .vision-anime, .mission-anime, .goal-anime {
+        &__item {
+            padding-left: 8px;
+        }
+        &__text {
+            font-size: 14px;
+            left: 40px;
+            width: auto;
+            white-space: nowrap;
+        }
+        &__dot {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .contact {
+        font-size: 21px;
     }
 
 }

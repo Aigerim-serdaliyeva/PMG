@@ -36,23 +36,29 @@
   <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
-<body id="main-page">
+<body id="main-page">    
+    
   <div class="loader">
     <div class="loader__content">Loading....</div>
   </div>
 
-  <div class="page-wrapper">
+  <div id="app" class="page-wrapper">            
+    <div class="burger-menu">
+      <a href="#" class="burger-menu__btn">
+        <span class="burger-menu__lines"></span>
+      </a>
 
+      <div class="burger-menu__overlay"></div>
+    </div>
+    
     <div class="header-mobile">
-
-      <div class="burger-menu">
+      <!-- <div class="burger-menu">
         <a href="#" class="burger-menu__btn">
           <span class="burger-menu__lines"></span>
         </a>
 
         <div class="burger-menu__overlay"></div>
-      </div>
-      
+      </div> -->      
       <a href="/" class="logo">
         <img src="./img/logo-mobile.png" alt="">
       </a>
@@ -74,50 +80,49 @@
           </div>
   
           <div class="header__language">
-            <a href="#kz" class="lang">KZ</a>\
-            <a href="#ru" class="lang">RU</a>\
-            <a href="#en" class="lang">EN</a>                        
+            <a @click.prevent="changeLang('kz')" class="lang">KZ</a>\
+            <a @click.prevent="changeLang('ru')" class="lang">RU</a>\
+            <a @click.prevent="changeLang('en')" class="lang">EN</a>                        
           </div>
         </div>
 
-        <a class="side"><span>Menu</span></a>
         
       </div>
       
       <div class="main-menu">
         <ul>
           <li class="link">
-            <a href="#company">О компании</a>
+            <a href="#company">{{ $t("menu.company") }}</a>
 
             <ul class="submenu-mobile">
               <li class="link">
-                <a href="#pmg">P M G</a>
+                <a href="#pmg">{{ $t("menu.pmg") }}</a>
               </li>
               <li class="link">
-                <a href="#vision">Наше видение</a>
+                <a href="#vision">{{ $t("menu.vision") }}</a>
               </li>
               <li class="link">
-                <a href="#mission">Миссия компании</a>
+                <a href="#mission">{{ $t("menu.mission") }}</a>
               </li>
               <li class="link">
-                <a href="#goal">Наша цель</a>
+                <a href="#goal">{{ $t("menu.goal") }}</a>
               </li>
               <li class="link">
-                <a href="#command">Наша команда</a>
+                <a href="#command">{{ $t("menu.command") }}</a>
               </li>
             </ul>
           </li>
           <li class="link">
-            <a href="#advantage">Преимущества</a>
+            <a href="#advantage">{{ $t("menu.advantage") }}</a>
           </li>
           <li class="link">
-            <a href="#service">Услуги</a>
+            <a href="#service">{{ $t("menu.service") }}</a>
           </li>
           <li class="link">
-            <a href="#project">Проекты</a>
+            <a href="#project">{{ $t("menu.project") }}</a>
           </li>
           <li class="link">
-            <a href="#contact">Контакты</a>
+            <a href="#contact">{{ $t("menu.contact") }}</a>
           </li>
         </ul>
       </div>
@@ -145,19 +150,19 @@
     <div class="submenu" id="menu"> 
       <ul>
         <li class="link">
-          <a href="#pmg">P M G</a>
+          <a href="#pmg">{{ $t("menu.pmg") }}</a>
         </li>
         <li class="link">
-          <a href="#vision">Наше видение</a>
+          <a href="#vision">{{ $t("menu.vision") }}</a>
         </li>
         <li class="link">
-          <a href="#mission">Миссия компании</a>
+          <a href="#mission">{{ $t("menu.mission") }}</a>
         </li>
         <li class="link">
-          <a href="#goal">Наша цель</a>
+          <a href="#goal">{{ $t("menu.goal") }}</a>
         </li>
         <li class="link">
-          <a href="#command">Наша команда</a>
+          <a href="#command">{{ $t("menu.command") }}</a>
         </li>
       </ul>
     </div>
@@ -171,35 +176,35 @@
             <img src="./img/pmg.png" alt="">
           </div>
           <div class="main__content">
-            <p class="main__text">PMG (Project MANagement Group) – управляющая компания, деятельность которой базируется на:</p>
+            <p class="main__text pmgTitle">{{ $t("pmg.text1") }}</p>
             <ul>
-              <li>сопровождении бизнеса,</li>
-              <li>инвестировании,</li>
-              <li>стратегии развития,</li>
-              <li>контроле направления.</li>
+              <li>{{ $t("pmg.li1") }}</li>
+              <li>{{ $t("pmg.li2") }}</li>
+              <li>{{ $t("pmg.li3") }}</li>
+              <li>{{ $t("pmg.li4") }}</li>
             </ul>
-            <p class="main__text">Каждый может расширить рамки и обрести новые возможности,
-                Мы – знаем как это сделать и делаем, не останавливаясь на достигнутом.</p>
+            <p class="main__text">{{ $t("pmg.text2") }}</p>
+            <p class="main__text">{{ $t("pmg.text3") }}</p>
           </div>          
         </div>
         <div class="figure">
           <div class="pmg-anime">
-            <div class="dot" style="top: -40px; left: -40px"><span class="dot-text">Сопровождении бизнеса</span></div>
-            <div class="dot" style="top: -40px; left: 100%"><span class="dot-text">Инвестирование</span></div>
-            <div class="dot" style="top: 100%; left: -40px"><span class="dot-text">Стратегия развития</span></div>
-            <div class="dot" style="top: 100%; left: 100%"><span class="dot-text">Контроль направления</span></div>
+            <div class="dot" style="top: -40px; left: -40px"><span class="dot-text">{{ $t("pmg.anime1") }}</span></div>
+            <div class="dot" style="top: -40px; left: 100%"><span class="dot-text">{{ $t("pmg.anime2") }}</span></div>
+            <div class="dot" style="top: 100%; left: -40px"><span class="dot-text">{{ $t("pmg.anime3") }}</span></div>
+            <div class="dot" style="top: 100%; left: 100%"><span class="dot-text">{{ $t("pmg.anime4") }}</span></div>
           </div>
         </div>        
       </div>
 
       <div class="main d-none" id="vision">
         <div class="content">
-          <h2 class="main__title"><span>Наше видение</span></h2>
+          <h2 class="main__title"><span>{{ $t("vision.title") }}</span></h2>
           <div class="main__content">
-            <p class="main__text">PMG (Project MANagement Group) – управляющая компания, каждый сотрудник которой позиционирует себя по принципу <span>«кем бы ты ни был, будь лучше вместе с нами».</span> </p>      
-            <p class="main__text">Мы совершенствуемся и совершенствуем Вас каждый день, независимо от отрасли, сегмента или ниши, <span>создавая успешное «завтра» с помощью «сегодня».</span> </p>
-            <p class="main__text">Помимо первенства на арене лидерства мы сфокусированы на поиске нужных людей, чьи амбиции и намерения совпадают с нашими.</p>
-            <div class="main__text__center">Мы не просто предлагаем ресурсы перспективной компании, а чувство уверенности, совместного роста и успеха.</div>
+            <p class="main__text">{{ $t("vision.text1") }} <span>{{ $t("vision.span1") }}</span> </p>      
+            <p class="main__text">{{ $t("vision.text2") }} <span>{{ $t("vision.span2") }}</span> </p>
+            <p class="main__text">{{ $t("vision.text3") }}</p>
+            <div class="main__text--center">{{ $t("vision.visionText") }}</div>
             <div class="rombs">
               <div class="romb"></div>
               <div class="romb"></div>
@@ -211,15 +216,15 @@
           <div class="vision-anime">
             <div class="vision-anime__item">
               <div class="vision-anime__dot"></div>
-              <div class="vision-anime__text">Совместный рост</div>
+              <div class="vision-anime__text">{{ $t("vision.anime1") }}</div>
             </div>
             <div class="vision-anime__item" style="transform: rotate(240deg)">
               <div class="vision-anime__dot"></div>
-              <div class="vision-anime__text">Уверенность</div>
+              <div class="vision-anime__text">{{ $t("vision.anime2") }}</div>
             </div>
             <div class="vision-anime__item" style="transform: rotate(120deg)">
               <div class="vision-anime__dot"></div>
-              <div class="vision-anime__text">Успех</div>
+              <div class="vision-anime__text">{{ $t("vision.anime3") }}</div>
             </div>
           </div>
         </div>
@@ -227,13 +232,12 @@
 
       <div class="main d-none" id="mission">
         <div class="content">
-          <h2 class="main__title"><span>Миссия компании</span></h2>
+          <h2 class="main__title"><span>{{ $t("mission.title") }}</span></h2>
           <div class="main__content">
-            <p class="main__text"><span>«Мыслить масштабно, действовать проактивно, работать синэргично»</span></p>
-            <p class="main__text">Наш успех прямо связан с отчетливостью того, кем мы являемся, а кем нет, чего хотим достичь, каким путем и с кем.</p>
-            <p class="main__text">Философия нашей компании – развиваться и развивать. 
-              Принося пользу тем, как мы работаем, с кем работаем и для кого работаем - наш бизнес ставит <span>акцент на глобальное улучшение состояния общества.</span></p>
-            <p class="main__text">Каждая совместная победа ведет к успеху компании, а каждый успех компании ведет к процветанию нации.</p>
+            <p class="main__text main__text--center"><span>{{ $t("mission.missionText") }}</span></p>
+            <p class="main__text">{{ $t("mission.text1") }}</p>
+            <p class="main__text">{{ $t("mission.text2") }} <span>{{ $t("mission.span2") }}</span></p>
+            <p class="main__text">{{ $t("mission.text3") }}</p>
             <div class="rombs">
               <div class="romb"></div>
               <div class="romb"></div>
@@ -242,18 +246,31 @@
           </div>          
         </div>
         <div class="figure">
-          
+          <div class="mission-anime">
+            <div class="mission-anime__item">
+              <div class="mission-anime__dot"></div>
+              <div class="mission-anime__text">{{ $t("mission.anime1") }}</div>
+            </div>
+            <div class="mission-anime__item" style="transform: rotate(240deg)">
+              <div class="mission-anime__dot"></div>
+              <div class="mission-anime__text">{{ $t("mission.anime2") }}</div>
+            </div>
+            <div class="mission-anime__item" style="transform: rotate(120deg)">
+              <div class="mission-anime__dot"></div>
+              <div class="mission-anime__text">{{ $t("mission.anime3") }}</div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="main d-none" id="goal">
         <div class="content">
-          <h2 class="main__title"><span>Наша цель</span></h2>
+          <h2 class="main__title"><span>{{ $t("goal.title") }}</span></h2>
           <div class="main__content">
-            <p class="main__text">Наша цель – формировать улучшение отечественного сервиса, путем выхода на рынок перспективных проектов, благотворно влияющих на уровень условий и качества жизни в стране.</p>
-            <p class="main__text">Создание эталона прогресса достигается путем комбинации нужных людей и их стратегического мышления.</p>
-            <p class="main__text">Наше общее видение – начало. Наше сотрудничество – развитие. Совместное достижение целей – успех.</p>
-            <div class="main__text__center">«Энтузиаст меняет себя, команда энтузиастов – мир»</div>
+            <p class="main__text">{{ $t("goal.text1") }}</p>
+            <p class="main__text">{{ $t("goal.text2") }}</p>
+            <p class="main__text">{{ $t("goal.text3") }}</p>
+            <div class="main__text main__text--center">{{ $t("goal.goalText") }}</div>
             <div class="rombs">
               <div class="romb"></div>
               <div class="romb"></div>
@@ -262,14 +279,28 @@
           </div>          
         </div>
         <div class="figure">
+          <div class="goal-anime">
+            <div class="goal-anime__item">
+              <div class="goal-anime__dot"></div>
+              <div class="goal-anime__text">{{ $t("goal.anime1") }}</div>
+            </div>
+            <div class="goal-anime__item" style="transform: rotate(240deg)">
+              <div class="goal-anime__dot"></div>
+              <div class="goal-anime__text">{{ $t("goal.anime2") }}</div>
+            </div>
+            <div class="goal-anime__item" style="transform: rotate(120deg)">
+              <div class="goal-anime__dot"></div>
+              <div class="goal-anime__text">{{ $t("goal.anime3") }}</div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="main d-none" id="command">
         <div class="content">
-          <h2 class="main__title"><span>Наша команда</span></h2>
-          <div class="main__content">
-            <div class="main__text__center">Утвердим список ключевых топ-менеджеров позже.</div>
+          <h2 class="main__title"><span>{{ $t("command.title") }}</span></h2>
+          <div class="main__content main__content--command">
+            <div class="main__text--center">{{ $t("command.text") }}</div>
           </div>          
         </div>
         <div class="figure">
@@ -278,61 +309,59 @@
 
       <div class="main d-none" id="advantage">
         <div class="content content--max">
-          <h2 class="main__title"><span>Наши Преимущества</span></h2>
+          <h2 class="main__title"><span>{{ $t("advantage.title") }}</span></h2>
           <div class="main__content">
-            <p class="main__text"><span>Наши интеллектуальные ресурсы</span> – потенциал людей, их уровень знаний, опыта, навыков.</p>
-            <p class="main__text"><span>Наша компетенция</span> - успешно  реализованные сложные и уникальные проекты в различных областях бизнеса.</p>
-            <p class="main__text"><span>Наша формула</span> - деньги приносят пользу, когда «работают». Мы создаём маршрут к финансовому благополучию через грамотное распоряжение средствами. </p>
-            <p class="main__text"><span>Наши гарантии</span> - прозрачные условия сотрудничества и защита Ваших финансов, высокая безопасность инвестирования.</p>
+            <p class="main__text"><span>{{ $t("advantage.span1") }}</span> {{ $t("advantage.text1") }}</p>
+            <p class="main__text"><span>{{ $t("advantage.span2") }}</span> {{ $t("advantage.text2") }}</p>
+            <p class="main__text"><span>{{ $t("advantage.span3") }}</span> {{ $t("advantage.text3") }}</p>
+            <p class="main__text"><span>{{ $t("advantage.span4") }}</span> {{ $t("advantage.text4") }}</p>
           </div>          
         </div>
         <div class="figure">
           <div class="advantage-anime">
-            <div class="dot first"><span class="text-first">Отличные кадры</span></div>
+            <div class="dot first"><span class="text-first">{{ $t("advantage.anime1") }}</span></div>
             <div class="line one"><img src="./img/line-1.png" alt=""></div>
-            <div class="dot second"><span class="text-second">Сложные проекты</span></div>
+            <div class="dot second"><span class="text-second">{{ $t("advantage.anime2") }}</span></div>
             <div class="line two"><img src="./img/line-2.png" alt=""></div>
-            <div class="dot third"><span class="text-third">Благополучие</span></div>
+            <div class="dot third"><span class="text-third">{{ $t("advantage.anime3") }}</span></div>
             <div class="line three"><img src="./img/line-1.png" alt=""></div>
-            <div class="dot fourth"><span class="text-fourth">Безопасность</span></div>
+            <div class="dot fourth"><span class="text-fourth">{{ $t("advantage.anime4") }}</span></div>
           </div>
         </div>
       </div>
 
       <div class="main d-none" id="service">
         <div class="content content--max">
-          <h2 class="main__title main__title--service"><span>Услуги Project <br>
-            MANagement Group</span></h2>
+          <h2 class="main__title main__title--service"><span>{{ $t("service.title") }}</span></h2>
           <div class="main__content main__content--service">
             <div class="main__block">
-              <div class="main__service">Работа «под ключ».</div>
-              <p class="main__text">Топ-менеджеры PMG (Project MANagement Group) знают с чего начать, имеют ресурсы необходимые для открытия 
-              прибыльного бизнеса, могут гарантировано с нуля выполнять весь объем работ, благоприятно сказывающийся на достижении цели. </p>
+              <div class="main__service">{{ $t("service.blockTitle1") }}</div>
+              <p class="main__text">{{ $t("service.blockText1") }} </p>
             </div>
             <div class="main__block">
-              <div class="main__service">Опыт.</div>
-              <p class="main__text">Успешный опыт открытия и ведения различных сфер бизнеса, наличие «уже» знающих людей здесь и сейчас.</p>
+              <div class="main__service">{{ $t("service.blockTitle2") }}</div>
+              <p class="main__text">{{ $t("service.blockText2") }}</p>
             </div>
             <div class="main__block">
-              <div class="main__service">Качество.</div>
-              <p class="main__text">При выборе профессионалов— вы развиваете бизнес без риска и уровень жизни без стагнации.</p>
+              <div class="main__service">{{ $t("service.blockTitle3") }}</div>
+              <p class="main__text">{{ $t("service.blockText3") }}</p>
             </div>
-            <div class="main__text__center">Собственный бизнес – способ повысить уровень жизни, привнося пользу себе и обществу в целом.</div>
+            <div class="main__text--center">{{ $t("service.serviceText") }}</div>
           </div>          
         </div>
         <div class="figure">
           <div class="service-anime">
             <div class="service-anime__item">
               <div class="service-anime__dot"></div>
-              <div class="service-anime__text">Работа «под ключ».</div>
+              <div class="service-anime__text">{{ $t("service.anime1") }}</div>
             </div>
             <div class="service-anime__item" style="transform: rotate(240deg)">
               <div class="service-anime__dot"></div>
-              <div class="service-anime__text">Качество.</div>
+              <div class="service-anime__text">{{ $t("service.anime2") }}</div>
             </div>
             <div class="service-anime__item" style="transform: rotate(120deg)">
               <div class="service-anime__dot"></div>
-              <div class="service-anime__text">Опыт.</div>
+              <div class="service-anime__text">{{ $t("service.anime3") }}</div>
             </div>
           </div>
         </div>
@@ -343,36 +372,31 @@
           <div class="project">
             <div class="project__img"><img src="./img/top-security.png" alt=""></div>
             <div class="project__block">
-              <p class="project__text">Охранная организация, осуществляющая полный спектр услуг по защите объекта в режиме 24/7.</p>
-              <p class="project__text">Специализация TOP Security KZ: обеспечение безопасности клиентов и их имущества.</p>
-              <p class="project__text">Услуги: тревожная кнопка, охранная система, постовая охрана, мобильный телохранитель.</p>
-              <div class="project__contact">Контакты: +7 (701) 351-09-86, +7 (727) 339-04-52 </div>
-              <div class="project__contact">Email: info@topsecurity.kz</div>
-              <a href="https://topsecurity.kz/" class="more" target="_blank">Подробнее...</a>
+              <p class="project__text">{{ $t("project.blockTextOne1") }}</p>
+              <p class="project__text">{{ $t("project.blockTextOne2") }}</p>
+              <p class="project__text">{{ $t("project.blockTextOne3") }}</p>
+              <div class="project__contact"><span>{{ $t("project.contact") }}</span> {{ $t("project.contact1") }}</div>
+              <div class="project__contact"><span>{{ $t("project.email") }}</span> {{ $t("project.email1") }}</div>
+              <a href="https://topsecurity.kz/" class="more" target="_blank">{{ $t("project.more") }}</a>
             </div>
           </div>
           <div class="project">
             <div class="project__img"><img src="./img/muratov-market.png" alt=""></div>
             <div class="project__block">
-              <p class="project__text">Цель социального магазина «Muratov Market» - обеспечить доступностью и высоким качеством обслуживания каждого жителя Казахстана! 
-                Часть прибыли магазина регулярно направляется на благотворительность. Совершая покупки в магазине Muratov Market Вы вносите свой вклад в помощь 
-                незащищенным слоям населения. Благотворительная инициатива направлена на улучшение качества жизни уязвимых слоев населения, 
-                а значит благодаря каждому покупателю жизнь людей становится лучше.</p>
-              <div class="project__contact">Адрес: г.Алматы, ул.Прокофьева, 144, ЖК «Манхэттэн»</div>
-              <div class="project__contact">Инстаграмм: @muratov.market</div>
-              <a href="" class="more" target="_blank">Подробнее...</a>
+              <p class="project__text">{{ $t("project.blockTextTwo") }}</p>
+              <div class="project__contact"><span>{{ $t("project.address") }}</span> {{ $t("project.address2") }}</div>
+              <div class="project__contact"><span>{{ $t("project.instagram") }}</span> {{ $t("project.email2") }}</div>
+              <a href="" class="more" target="_blank">{{ $t("project.more") }}</a>
             </div>
           </div>
           <div class="project">
             <div class="project__img"><img src="./img/muratov-partners.png" alt=""></div>
             <div class="project__block">
-              <p class="project__text">Миссия компании – обезопасить бизнес Клиента, предоставив качественную юридическую помощь.</p>
-              <p class="project__text">Оказание услуг аутстаффинга, что значительно сокращает расходы на поиск квалифицированного персонала 
-                и удержание ценных сотрудников. Услуга «Проектный юрист» даст Вам доступ к опыту и знаниям большого штата юристов во всех 
-                отраслях права, а это значит, что Ваш кейс всегда будет направлен лучшим специалистам в своей области, что гарантирует успешный результат.</p>
-              <div class="project__contact">Контакты: +7 (727) 277-76-00 </div>
-              <div class="project__contact">Email: info@muratov.kz</div>
-              <a href="https://muratov.kz/" class="more" target="_blank">Подробнее...</a>
+              <p class="project__text">{{ $t("project.blockTextThree1") }}</p>
+              <p class="project__text">{{ $t("project.blockTextThree2") }}</p>
+              <div class="project__contact"><span>{{ $t("project.contact") }}</span> {{ $t("project.contact3") }}</div>
+              <div class="project__contact"><span>{{ $t("project.email") }}</span> {{ $t("project.contact3") }}</div>
+              <a href="https://muratov.kz/" class="more" target="_blank">{{ $t("project.more") }}</a>
             </div>
           </div>         
         </div>
@@ -384,13 +408,20 @@
       </div>
 
       <div class="main d-none" id="contact">
-        <div class="content content--max">
-          <div class="pmg-img">
-            <img src="./img/pmg-big.png" alt="">
-          </div>         
+        <div class="content content--max">          
+          <div class="contact">
+            <div class="pmg-img">
+              <img src="./img/pmg-big.png" alt="">
+            </div>  
+            <div class="contact__address"><span>{{ $t("contact.address") }}</span> {{ $t("contact.addressText") }}</div>
+            <div class="contact__phone"><span>{{ $t("contact.phone") }}</span> <a href="tel:+7" class="text-phone" id="phone_number">{{ $t("contact.phoneText") }}</a></div>
+            <div class="contact__email"><span>{{ $t("contact.email") }}</span> <a href="mailto:info@pmginvest.com">{{ $t("contact.emailText") }}</a> </div>          
+          </div>       
         </div>
         <div class="figure">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6df6c77a54f1d83dd5a40ef813a86e2e779f37b5c483f5410006bc182a254959&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=true"></script>
+          <div class="map">
+            <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6df6c77a54f1d83dd5a40ef813a86e2e779f37b5c483f5410006bc182a254959&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script> -->
+          </div>
         </div>
       </div>
 
@@ -400,6 +431,7 @@
 
   <script src="./js/libs.min.js"></script>
   <script src="./js/anime-config.js"></script>
+  <script src="./js/localization.js"></script>
   <script src="./js/main.min.js"></script>
   
 </body>

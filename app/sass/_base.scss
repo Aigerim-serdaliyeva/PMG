@@ -100,37 +100,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.hamburger {
-  background-color: #fff;
-  padding: 10px;
-	line-height: 0;
-  display: none;
-  margin-left: 20px;
-	    
-  &-box {
-    width: 30px;
-  }
-
-  &-inner {
-    &, &:after, &:before {            
-      border-radius: 0;
-      width: 100%;
-      height: 2px;        
-    }
-
-    & {
-      margin-top: -1px;
-    }
-
-    &:before {
-      top: 0;
-    }
-
-    &:after {
-      bottom: -7px;
-    }
-  }
-}
 
 .grow {
   flex-grow: 1;
@@ -158,41 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-.call-me {
-  position: fixed;
-	bottom: 20px;
-	left: 20px;
-	z-index: 99;
-	cursor: pointer;
-  @include circle(50px);
-  background-color: #58ea00;
-  cursor: pointer;
-  display: none;
 
-  .fa {
-    color: #fff;
-    font-size: 25px;
-    position: relative;
-    top: 1px;
-  }
-
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    right: -15px;
-    bottom: -15px;
-    border: 1px solid #58ea00;
-    border-radius: 50%;
-    animation: pulse 1.5s linear infinite;
-  }
-
-  &:after {
-    animation-delay: 0.5s;
-  }
-}
 
 @keyframes pulse {
   0% {

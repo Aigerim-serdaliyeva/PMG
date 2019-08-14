@@ -19,6 +19,30 @@ let pmgAnimeConfigText = {
   easing: 'linear',
 };
 
+let projectAnimeConfig = {
+  targets: ".project-anime",
+  loop: true,
+  autoplay: false,
+  keyframes: [
+    {
+      width: '128px',
+      height: '128px',        
+      opacity: 1,
+      top: 'calc(50% - 64px)',
+      right: 'calc(50% - 64px)',
+      duration: 2000,
+      easing: 'easeOutElastic(1, .4)'
+    },
+    {
+      rotate: '1turn',
+      scale: 0,
+      duration: 500,
+      easing: 'linear'
+    }
+  ],
+  delay: (el,i) => i * 2500
+};
+
 const triangleAnimeConfig = {
   delay: 2000,
   loop: true,
@@ -81,11 +105,45 @@ let visionAnimeTextConfig = {
   targets: '.vision-anime__text'
 };
 
+let missionAnimeConfig = {
+  ...triangleAnimeConfig,
+  targets: '.mission-anime__item'
+};
+
+let missionAnimeTextConfig = {
+  ...triangleAnimeTextConfig,
+  targets: '.mission-anime__text'
+};
+
+let goalAnimeConfig = {
+  ...triangleAnimeConfig,
+  targets: '.goal-anime__item'
+};
+
+let goalAnimeTextConfig = {
+  ...triangleAnimeTextConfig,
+  targets: '.goal-anime__text'
+};
+
 if (windowSize < mobileSize) {
   pmgAnimeConfig = {
     ...pmgAnimeConfig,
     left: 'calc(50% - 85px)',
     top: (el, i) => `calc(50% - 63px + ${ i * 35 }px)`
+  }
+}
+
+if (windowSize < mobileSize) {
+  projectAnimeConfig = {
+    ...projectAnimeConfig,
+    keyframes: [
+      {
+        width: '90px',
+        height: '90px',    
+        top: 'calc(50% - 45px)',
+        right: 'calc(50% - 45px)'
+      },
+    ],
   }
 }
 
