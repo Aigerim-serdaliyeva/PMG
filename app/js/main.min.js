@@ -1,16 +1,12 @@
-
-
-
 const jqueryApp = $(document).ready(function () {
   const $loader = $('.loader');
   var $menu = $(".main-menu");
-  var $hamburger = $(".hamburger");
   const $links = $('.link');
   const $pages = $('.main');
   const $header = $('.header');
-  const $burgerMenu = $('.burger-menu');
   const $submenu = $('.submenu');
-  const $overlay = $('.burger-menu-overlay')
+  const $burgerMenu = $('.burger-menu');
+  const $overlay = $('.burger-menu-overlay');
   const $companyLink = $('[href="#company"]').closest('li');
   const submenuList = ["#pmg", "#vision", "#mission", "#goal", "#command"];
 
@@ -47,30 +43,6 @@ const jqueryApp = $(document).ready(function () {
   const pmgAnimeText = anime(pmgAnimeConfigText);
 
   const projectAnime = anime(projectAnimeConfig);
-
-  // const projectAnime = anime({
-  //   targets: ".project-anime",
-  //   loop: true,
-  //   autoplay: false,
-  //   keyframes: [
-  //     {
-  //       width: '128px',
-  //       height: '128px',        
-  //       opacity: 1,
-  //       top: 'calc(50% - 64px)',
-  //       right: 'calc(50% - 64px)',
-  //       duration: 2000,
-  //       easing: 'easeOutElastic(1, .4)'
-  //     },
-  //     {
-  //       rotate: '1turn',
-  //       scale: 0,
-  //       duration: 500,
-  //       easing: 'linear'
-  //     }
-  //   ],
-  //   delay: (el,i) => i * 2500
-  // });
   
   const serviceAnime = anime(serviceAnimeConfig);
   const serviceAnimeText = anime(serviceAnimeTextConfig);
