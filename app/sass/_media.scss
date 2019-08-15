@@ -363,17 +363,20 @@
 @media (max-width: 767px) {
 
     .particles {
-        top: 10%;
-        left: 55%;
+        top: 20%;
+        left: 60%;
         height: 15%;
         width: 500px;
     }
-
+    
     .header {
         .logo {
             img {
                 max-width: 150px;
             }
+        }
+        .rombs {
+            margin: 3px auto 0;
         }
     }
 
@@ -534,7 +537,7 @@
     }
 
     .contact {
-        font-size: 21px;
+        font-size: 18px;
     }
 
 }

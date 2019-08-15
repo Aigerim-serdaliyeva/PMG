@@ -1208,12 +1208,14 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 767px) {
   .particles {
-    top: 10%;
-    left: 55%;
+    top: 20%;
+    left: 60%;
     height: 15%;
     width: 500px; }
   .header .logo img {
     max-width: 150px; }
+  .header .rombs {
+    margin: 3px auto 0; }
   .main-menu ul li {
     padding: 5px; }
   .main-menu ul a {
@@ -1314,4 +1316,4 @@ h1, h2, h3, h4, h5, h6 {
     width: 18px;
     height: 18px; }
   .contact {
-    font-size: 21px; } }
+    font-size: 18px; } }
