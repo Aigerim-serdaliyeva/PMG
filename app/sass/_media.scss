@@ -132,7 +132,15 @@
     .service-anime, .vision-anime, .mission-anime, .goal-anime {
       left: 30%;
       &__text {
-        font-size: 22px;
+        font-size: 20px;
+        left: 55px;
+      }
+      &__dot {
+        width: 35px;
+        height: 35px;
+      }
+      &__item {
+        padding-left: 10px;
       }
     }
 }
@@ -141,7 +149,6 @@
     .page-wrapper {
         flex-direction: column;
         height: auto;
-        // padding-top: 91px;
     }
 
     .particles {
