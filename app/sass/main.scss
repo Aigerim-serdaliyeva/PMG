@@ -9,10 +9,6 @@
 }
 
 
-.side {
-  display: none;
-}
-
 .particles {
   position: absolute;
   top: 50%;
@@ -46,11 +42,6 @@
   display: block !important;
 }
 
-.arrow-menu {
-  position: absolute;
-  top: 30px;
-  left: 20px;
-}
 
 .header {
   font-family: Arial, serif;
@@ -697,10 +688,6 @@
   & > *{
     margin-bottom: 8px;
   }
-}
-
-.map {
-  // z-index: 5;
 }
 
 
