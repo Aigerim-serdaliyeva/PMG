@@ -425,7 +425,7 @@ h1, h2, h3, h4, h5, h6 {
       border-radius: 50%;
       background: #fff;
       left: 0;
-      top: 6%; }
+      top: 8px; }
   .main__service {
     font-weight: bold;
     font-size: 24px;
@@ -908,7 +908,8 @@ h1, h2, h3, h4, h5, h6 {
             flex-direction: column;
     flex-direction: column-reverse; }
     .main__title {
-      margin-top: 10%; }
+      margin-top: 10%;
+      line-height: 25px; }
       .main__title::after {
         display: none; }
       .main__title--img::before {
@@ -978,8 +979,16 @@ h1, h2, h3, h4, h5, h6 {
   .main__title {
     margin-top: 5%;
     font-size: 24px; }
+    .main__title span {
+      padding: 0 8px; }
+  .main__block {
+    padding-left: 15px; }
+    .main__block::before {
+      width: 8px;
+      height: 8px;
+      top: 12px; }
   .main__service {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 0; }
   .main__content {
     padding: 8% 3% 4%; }
@@ -1020,7 +1029,7 @@ h1, h2, h3, h4, h5, h6 {
       max-width: 150px; }
   .main__text {
     font-size: 12px; }
-    .main__text__center {
+    .main__text--center {
       font-size: 12px; }
   .main ul {
     margin: 15px auto 15px 30px; }

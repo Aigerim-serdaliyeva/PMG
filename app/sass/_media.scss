@@ -247,6 +247,7 @@
 
         &__title {
             margin-top: 10%;
+            line-height: 25px;      
             &::after {
                 display: none;
             }
@@ -348,10 +349,21 @@
     .main {
         &__title {
             margin-top: 5%;
-            font-size: 24px;                               
+            font-size: 24px;  
+            span {
+                padding: 0 8px;
+            }                       
+        }
+        &__block {
+            padding-left: 15px;
+            &::before {
+                width: 8px;
+                height: 8px;
+                top: 12px;
+            }
         }
         &__service {
-            font-size: 16px;
+            font-size: 14px;
             margin-bottom: 0;
         }
         &__content {
@@ -444,7 +456,7 @@
 
         &__text {
             font-size: 12px;
-            &__center {
+            &--center {
                 font-size: 12px;
             }
         }
