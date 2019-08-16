@@ -470,6 +470,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 39px; }
   .project:last-child {
     margin-bottom: 0; }
+  .project__content {
+    padding: 7% 0; }
   .project__img {
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
@@ -513,11 +515,7 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+            flex-direction: column; }
   .content--max {
     width: 54.6%; }
 
@@ -744,6 +742,14 @@ h1, h2, h3, h4, h5, h6 {
   .contact > * {
     margin-bottom: 8px; }
 
+@media (min-width: 1100.5px) {
+  .content {
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none; }
+  .content::-webkit-scrollbar {
+    display: none; } }
+
 @media (max-width: 1700px) {
   .header {
     min-width: 270px;
@@ -827,6 +833,12 @@ h1, h2, h3, h4, h5, h6 {
       height: 35px; }
     .service-anime__item, .vision-anime__item, .mission-anime__item, .goal-anime__item {
       padding-left: 10px; } }
+
+@media (max-width: 1300px) {
+  .service-anime, .vision-anime, .mission-anime, .goal-anime {
+    left: 25%; }
+    .service-anime__text, .vision-anime__text, .mission-anime__text, .goal-anime__text {
+      white-space: none; } }
 
 @media (max-width: 1100px) {
   .page-wrapper {
@@ -1045,6 +1057,8 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1000px; }
     .project::before, .project::after {
       display: none; }
+    .project__content {
+      padding: 0; }
     .project__img {
       text-align: center;
       max-width: none;

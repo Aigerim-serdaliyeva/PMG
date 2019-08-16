@@ -403,6 +403,10 @@
     margin-bottom: 0;
   }
 
+  &__content {
+    padding: 7% 0;
+  }
+
 
   &__img {
     flex-shrink: 0;
@@ -453,7 +457,6 @@
     background: #004C36;
     display: flex;
     flex-direction: column;
-    justify-content: center;
   }
 
   &--max {
