@@ -1,3 +1,14 @@
+@media (min-width: 1100.5px) {
+    .content {
+        overflow: auto;
+        -ms-overflow-style: none;  // IE 10+
+        scrollbar-width: none;  // Firefox
+    }
+    .content::-webkit-scrollbar { 
+        display: none;  // Safari and Chrome
+    }
+}
+
 @media (max-width: 1700px) {
     .header {
         min-width: 270px;
