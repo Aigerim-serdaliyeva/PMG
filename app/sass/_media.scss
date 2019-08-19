@@ -179,10 +179,35 @@
             }
         }
     }
+
+    .contact {
+        font-size: 18px;
+        & > * {
+            margin-bottom: 5px;
+        }
+    }
     .service-anime, .vision-anime, .mission-anime, .goal-anime {
         left: 25%;
         &__text {
             white-space: none;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .service-anime, .vision-anime, .mission-anime, .goal-anime {
+        left: 20%;
+        &__item {
+            padding-left: 6px;
+        }
+        &__dot {
+            width: 30px;
+            height: 30px;
+        }
+        &__text {
+            white-space: none;
+            font-size: 16px;
+            left: 50px;
         }
     }
 }
@@ -375,6 +400,7 @@
 
     .service-anime, .vision-anime, .mission-anime, .goal-anime {
         top: 40%;
+        left: 40%;
     }
 
     .contact {
@@ -594,6 +620,7 @@
     }
 
     .service-anime, .vision-anime, .mission-anime, .goal-anime {
+        left: 30%;
         &__item {
             padding-left: 8px;
         }

@@ -29,7 +29,8 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: $text_color;
+    // color: $text_color;
+    color: $black;
     text-decoration: none;
   }
 
