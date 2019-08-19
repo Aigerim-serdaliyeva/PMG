@@ -87,6 +87,12 @@
             font-size: 16px;
             margin-bottom: 15px;
         }
+        ul {            
+            margin: 15px auto 15px 45px;
+            li {
+                font-size: 16px;
+            }
+        }
         &__service {
             font-size: 20px;
             margin-bottom: 0;
@@ -157,11 +163,25 @@
 }
 
 @media (max-width: 1300px) {
+    .main {
+        &__title {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        &__text {
+            font-size: 14px;
+        }
+
+        ul {
+            margin: 10px auto 10px 40px;
+            li {
+                font-size: 14px;
+            }
+        }
+    }
     .service-anime, .vision-anime, .mission-anime, .goal-anime {
-        // top: 40%;
         left: 25%;
         &__text {
-            // font-size: 18px;
             white-space: none;
         }
     }

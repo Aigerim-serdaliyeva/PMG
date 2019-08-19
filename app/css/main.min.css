@@ -414,6 +414,8 @@ h1, h2, h3, h4, h5, h6 {
     .main__text--center {
       text-align: center;
       font-weight: bold; }
+    .main__text--margin {
+      margin-bottom: 0 !important; }
   .main__block {
     position: relative;
     padding-left: 29px; }
@@ -795,6 +797,10 @@ h1, h2, h3, h4, h5, h6 {
   .main__text {
     font-size: 16px;
     margin-bottom: 15px; }
+  .main ul {
+    margin: 15px auto 15px 45px; }
+    .main ul li {
+      font-size: 16px; }
   .main__service {
     font-size: 20px;
     margin-bottom: 0; }
@@ -835,6 +841,15 @@ h1, h2, h3, h4, h5, h6 {
       padding-left: 10px; } }
 
 @media (max-width: 1300px) {
+  .main__title {
+    font-size: 24px;
+    line-height: 28px; }
+  .main__text {
+    font-size: 14px; }
+  .main ul {
+    margin: 10px auto 10px 40px; }
+    .main ul li {
+      font-size: 14px; }
   .service-anime, .vision-anime, .mission-anime, .goal-anime {
     left: 25%; }
     .service-anime__text, .vision-anime__text, .mission-anime__text, .goal-anime__text {
