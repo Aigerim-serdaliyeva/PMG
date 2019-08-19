@@ -187,8 +187,10 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center; }
   .header__language {
     color: #383838; }
-    .header__language .lang:hover, .header__language.active {
-      color: #383838; }
+    .header__language .lang {
+      cursor: pointer; }
+      .header__language .lang:hover, .header__language .lang.active {
+        color: #383838; }
   .header .rombs {
     margin: 15px auto 10px; }
 

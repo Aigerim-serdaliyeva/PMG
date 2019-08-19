@@ -122,7 +122,7 @@ const messages = {
             address: "Адрес:",
             addressText: " Казахстан, г. Алматы, ул. Шевченко 153/1",
             phone: "Телефон:",
-            phoneText: "+7(727) 2777-606",
+            phoneText: "+7(727) 2777-600",
             email: "Email:",
             emailText: "info@pmginvest.com"
         }
@@ -248,12 +248,12 @@ const messages = {
         },
 
         contact: {
-            address: "",
-            addressText: "",
-            phone: "",
-            phoneText: "",
-            email: "",
-            emailText: ""
+            address: "Address:",
+            addressText: " Kazakhstan, Almaty, st. Shevchenko 153/1",
+            phone: "Phone:",
+            phoneText: "+7(727) 2777-600",
+            email: "Email:",
+            emailText: "info@pmginvest.com"
         }
     },
 
@@ -377,12 +377,12 @@ const messages = {
         },
 
         contact: {
-            address: "",
-            addressText: "",
-            phone: "",
-            phoneText: "",
-            email: "",
-            emailText: ""
+            address: "Мекенжайы: ",
+            addressText: "Алматы қаласы, Шевченко көшесі, 153/1",
+            phone: "Телефон:",
+            phoneText: "+7(727) 2777-600",
+            email: "Email:",
+            emailText: "info@pmginvest.com"
         }
     }
   }

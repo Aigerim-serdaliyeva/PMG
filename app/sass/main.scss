@@ -66,8 +66,11 @@
   &__language {
     color: $black;
 
-    .lang:hover, &.active {
-      color: $black
+    .lang {
+      cursor: pointer;
+      &:hover, &.active {
+        color: $black;
+      }
     }
   }
 
