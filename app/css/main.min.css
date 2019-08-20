@@ -778,6 +778,19 @@ h1, h2, h3, h4, h5, h6 {
       max-width: 160px;
       margin-right: 25px; } }
 
+@media (max-width: 1600px) {
+  .service-anime, .vision-anime, .mission-anime, .goal-anime {
+    left: 25%; }
+    .service-anime__text, .vision-anime__text, .mission-anime__text, .goal-anime__text {
+      font-size: 22px;
+      left: 55px;
+      white-space: normal; }
+    .service-anime__dot, .vision-anime__dot, .mission-anime__dot, .goal-anime__dot {
+      width: 35px;
+      height: 35px; }
+    .service-anime__item, .vision-anime__item, .mission-anime__item, .goal-anime__item {
+      padding-left: 10px; } }
+
 @media (max-width: 1400px) {
   .header {
     min-width: 230px;
@@ -834,17 +847,7 @@ h1, h2, h3, h4, h5, h6 {
     .advantage-anime .dot.second span, .advantage-anime .dot.fourth span {
       right: 50px; }
     .advantage-anime .dot span {
-      font-size: 16px; }
-  .service-anime, .vision-anime, .mission-anime, .goal-anime {
-    left: 30%; }
-    .service-anime__text, .vision-anime__text, .mission-anime__text, .goal-anime__text {
-      font-size: 20px;
-      left: 55px; }
-    .service-anime__dot, .vision-anime__dot, .mission-anime__dot, .goal-anime__dot {
-      width: 35px;
-      height: 35px; }
-    .service-anime__item, .vision-anime__item, .mission-anime__item, .goal-anime__item {
-      padding-left: 10px; } }
+      font-size: 16px; } }
 
 @media (max-width: 1300px) {
   .main__title {
@@ -861,9 +864,7 @@ h1, h2, h3, h4, h5, h6 {
     .contact > * {
       margin-bottom: 5px; }
   .service-anime, .vision-anime, .mission-anime, .goal-anime {
-    left: 25%; }
-    .service-anime__text, .vision-anime__text, .mission-anime__text, .goal-anime__text {
-      white-space: none; } }
+    left: 25%; } }
 
 @media (max-width: 1280px) {
   .service-anime, .vision-anime, .mission-anime, .goal-anime {
@@ -874,7 +875,6 @@ h1, h2, h3, h4, h5, h6 {
       width: 30px;
       height: 30px; }
     .service-anime__text, .vision-anime__text, .mission-anime__text, .goal-anime__text {
-      white-space: none;
       font-size: 16px;
       left: 50px; } }
 
