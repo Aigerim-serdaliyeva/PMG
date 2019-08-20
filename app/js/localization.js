@@ -150,10 +150,10 @@ const messages = {
             li4: "supervision.",
             text2: "Everyone is able to broaden the scope and embrace new opportunities, ",
             text3: "We know how to reach it and do moving beyond.",
-            anime1: "Business escort",
-            anime2: "Investments",
+            anime1: "Support of business",
+            anime2: "Investment",
             anime3: "Development strategy",
-            anime4: "Direction control"
+            anime4: "Supervision"
         },
 
         vision: {
@@ -279,10 +279,10 @@ const messages = {
             li4: "бағытты бақылау.",
             text2: "Әркім шеңберінен шыға алады және жаңа мүмкіндіктер ала алады,",
             text3: "Біз мұны қалай жасау керектігін білеміз және де, жеткен жетістіктерімізге тоқтамай, жасап жүрміз.",
-            anime1: "Іскерлік сүйемелдеу",
+            anime1: "Бизнесті сүйемелдеу",
             anime2: "Инвестициялау",
             anime3: "Даму стратегиясы",
-            anime4: "Бағытты басқару"
+            anime4: "Бағытты бақылау"
         },
 
         vision: {
