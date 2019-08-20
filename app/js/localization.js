@@ -63,11 +63,6 @@ const messages = {
             anime3: "Успех"
         },
 
-        command: {
-            title: "Наша команда",
-            text: "Утвердим список ключевых топ-менеджеров позже."
-        },
-
         advantage: {
             title: "Наши Преимущества",
             span1: "Наши интеллектуальные ресурсы",
@@ -192,11 +187,6 @@ const messages = {
             anime3: "Success"
         },
 
-        command: {
-            title: "Our team",
-            text: "Approve the list of key top managers later."
-        },
-
         advantage: {
             title: "Advantages",
             span1: "Our intellectual resources",
@@ -319,11 +309,6 @@ const messages = {
             anime1: "",
             anime2: "",
             anime3: ""
-        },
-
-        command: {
-            title: "Біздің команда",
-            text: "Негізгі топ-менеджерлер тізімін кейінірек бекітеміз."
         },
 
         advantage: {
