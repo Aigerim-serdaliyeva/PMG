@@ -460,6 +460,25 @@
         height: 15%;
         width: 500px;
     }
+
+    .maintenance {
+        background-size: cover;
+        background-position: center left;
+        .logo {
+            max-width: 300px;
+        }
+        &__text {
+            font-size: 18px;
+        }
+        &__contact {
+            font-size: 14px;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact__phone {
+            margin-bottom: 25px;
+        }
+    }
     
     // .burger-menu__btn {
     //     top: 15px;

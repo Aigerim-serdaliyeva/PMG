@@ -1,5 +1,9 @@
 const messages = {
     ru: {   
+        maintenance: {
+            text: "Сайт на обслуживании, зайдите пожалуйста, позже!"
+        },
+
         menu: {
             company: "О компании",
             pmg: "PMG",

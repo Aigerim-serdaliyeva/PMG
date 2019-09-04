@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>PMG</title>
+  <meta name="description" content="PMG">
+  <meta name="keywords" content="PMG">
+
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <style>
+    .loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #F7F7F7;
+      z-index: 98;
+    }
+    .loader__content {
+      color: #383838;
+      font-size: 24px;
+    }
+  </style>
+  
+  <link rel="shortcut icon" href="img/favicon.ico?v=13" type="image/x-icon">
+  <link rel="stylesheet" href="./css/libs.min.css">
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body id="main-page">    
+    
+  <div class="loader">
+    <div class="loader__content">Loading....</div>
+  </div>
+
+  <div id="app" class="page-wrapper">            
+    <div class="burger-menu">
+      <a href="#" class="burger-menu__btn">
+        <span class="burger-menu__lines"></span>
+      </a>
+
+      <div class="burger-menu__overlay"></div>
+    </div>
+    
+    <div class="header-mobile">
+      <a href="/" class="logo">
+        <img src="./img/logo-mobile.png" alt="">
+      </a>
+    </div>
+
+    <nav class="header">
+
+      <div class="header__content">
+        <a href="/" class="logo">
+          <img src="./img/logo.png" alt="">
+        </a>
+
+        <div class="header__lang">
+          <div class="rombs">
+            <div class="romb"></div>
+            <div class="romb"></div>
+            <div class="romb"></div>
+          </div>
+  
+          <div class="header__language">
+            <a @click.prevent="changeLang('kz')" class="lang">KZ</a>\
+            <a @click.prevent="changeLang('ru')" class="lang">RU</a>\
+            <a @click.prevent="changeLang('en')" class="lang">EN</a>                        
+          </div>
+        </div>
+
+        
+      </div>
+      
+      <div class="main-menu">
+        <ul>
+          <li class="link">
+            <a href="#company">{{ $t("menu.company") }}</a>
+
+            <ul class="submenu-mobile">
+              <li class="link">
+                <a href="#pmg">{{ $t("menu.pmg") }}</a>
+              </li>
+              <li class="link">
+                <a href="#vision">{{ $t("menu.vision") }}</a>
+              </li>
+              <li class="link">
+                <a href="#mission">{{ $t("menu.mission") }}</a>
+              </li>
+              <li class="link">
+                <a href="#goal">{{ $t("menu.goal") }}</a>
+              </li>
+            </ul>
+          </li>
+          <li class="link">
+            <a href="#advantage">{{ $t("menu.advantage") }}</a>
+          </li>
+          <li class="link">
+            <a href="#service">{{ $t("menu.service") }}</a>
+          </li>
+          <li class="link">
+            <a href="#project">{{ $t("menu.project") }}</a>
+          </li>
+          <li class="link">
+            <a href="#contact">{{ $t("menu.contact") }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer">
+        <div class="rombs">
+          <div class="romb"></div>
+          <div class="romb"></div>
+          <div class="romb"></div>
+        </div>
+        <div class="footer__follow">FOLLOW US</div>
+        <div class="footer__icons">
+          <a href="" class="icon"><img src="./img/whatsapp.png" alt=""></a>
+          <a href="" class="icon"><img src="./img/facebook.png" alt=""></a>
+          <a href="" class="icon"><img src="./img/instagram.png" alt=""></a>
+        </div>
+        <div class="footer__text">
+          2019, PMG - ALL RIGHTS RESERVED
+        </div>
+        <div class="footer__text">CREATED BY “KDO”</div>
+      </div>
+
+    </nav>
+
+    <div class="submenu" id="menu"> 
+      <ul>
+        <li class="link">
+          <a href="#pmg">{{ $t("menu.pmg") }}</a>
+        </li>
+        <li class="link">
+          <a href="#vision">{{ $t("menu.vision") }}</a>
+        </li>
+        <li class="link">
+          <a href="#mission">{{ $t("menu.mission") }}</a>
+        </li>
+        <li class="link">
+          <a href="#goal">{{ $t("menu.goal") }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div id="particles-js" class="particles"></div>
+
+      <div class="main" id="pmg">
+        <div class="content">
+          <div class="main__title main__title--img">
+            <img src="./img/pmg.png" alt="">
+          </div>
+          <div class="main__content">
+            <p class="main__text pmgTitle">{{ $t("pmg.text1") }}</p>
+            <ul>
+              <li>{{ $t("pmg.li1") }}</li>
+              <li>{{ $t("pmg.li2") }}</li>
+              <li>{{ $t("pmg.li3") }}</li>
+              <li>{{ $t("pmg.li4") }}</li>
+            </ul>
+            <p class="main__text main__text--margin">{{ $t("pmg.text2") }}</p>
+            <p class="main__text">{{ $t("pmg.text3") }}</p>
+          </div>          
+        </div>
+        <div class="figure">
+          <div class="pmg-anime">
+            <div class="dot" style="top: -40px; left: -40px"><span class="dot-text">{{ $t("pmg.anime1") }}</span></div>
+            <div class="dot" style="top: -40px; left: 100%"><span class="dot-text">{{ $t("pmg.anime2") }}</span></div>
+            <div class="dot" style="top: 100%; left: -40px"><span class="dot-text">{{ $t("pmg.anime3") }}</span></div>
+            <div class="dot" style="top: 100%; left: 100%"><span class="dot-text">{{ $t("pmg.anime4") }}</span></div>
+          </div>
+        </div>        
+      </div>
+
+      <div class="main d-none" id="vision">
+        <div class="content">
+          <h2 class="main__title"><span>{{ $t("vision.title") }}</span></h2>
+          <div class="main__content">
+            <p class="main__text">{{ $t("vision.text1") }} <span>{{ $t("vision.span1") }}</span> </p>      
+            <p class="main__text">{{ $t("vision.text2") }} <span>{{ $t("vision.span2") }}</span> </p>
+            <p class="main__text">{{ $t("vision.text3") }}</p>
+            <div class="main__text--center">{{ $t("vision.visionText") }}</div>
+            <div class="rombs">
+              <div class="romb"></div>
+              <div class="romb"></div>
+              <div class="romb"></div>
+            </div>
+          </div>          
+        </div>
+        <div class="figure">
+          <div class="vision-anime">
+            <div class="vision-anime__item">
+              <div class="vision-anime__dot"></div>
+              <div class="vision-anime__text">{{ $t("vision.anime1") }}</div>
+            </div>
+            <div class="vision-anime__item" style="transform: rotate(240deg)">
+              <div class="vision-anime__dot"></div>
+              <div class="vision-anime__text">{{ $t("vision.anime2") }}</div>
+            </div>
+            <div class="vision-anime__item" style="transform: rotate(120deg)">
+              <div class="vision-anime__dot"></div>
+              <div class="vision-anime__text">{{ $t("vision.anime3") }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main d-none" id="mission">
+        <div class="content">
+          <h2 class="main__title"><span>{{ $t("mission.title") }}</span></h2>
+          <div class="main__content">
+            <p class="main__text main__text--center"><span>{{ $t("mission.missionText") }}</span></p>
+            <p class="main__text">{{ $t("mission.text1") }}</p>
+            <p class="main__text">{{ $t("mission.text2") }} <span>{{ $t("mission.span2") }}</span></p>
+            <p class="main__text">{{ $t("mission.text3") }}</p>
+            <div class="rombs">
+              <div class="romb"></div>
+              <div class="romb"></div>
+              <div class="romb"></div>
+            </div>
+          </div>          
+        </div>
+        <div class="figure">
+          <div class="mission-anime">
+            <div class="mission-anime__item">
+              <div class="mission-anime__dot"></div>
+              <div class="mission-anime__text">{{ $t("mission.anime1") }}</div>
+            </div>
+            <div class="mission-anime__item" style="transform: rotate(240deg)">
+              <div class="mission-anime__dot"></div>
+              <div class="mission-anime__text">{{ $t("mission.anime2") }}</div>
+            </div>
+            <div class="mission-anime__item" style="transform: rotate(120deg)">
+              <div class="mission-anime__dot"></div>
+              <div class="mission-anime__text">{{ $t("mission.anime3") }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main d-none" id="goal">
+        <div class="content">
+          <h2 class="main__title"><span>{{ $t("goal.title") }}</span></h2>
+          <div class="main__content">
+            <p class="main__text">{{ $t("goal.text1") }}</p>
+            <p class="main__text">{{ $t("goal.text2") }}</p>
+            <p class="main__text">{{ $t("goal.text3") }}</p>
+            <div class="main__text main__text--center">{{ $t("goal.goalText") }}</div>
+            <div class="rombs">
+              <div class="romb"></div>
+              <div class="romb"></div>
+              <div class="romb"></div>
+            </div>
+          </div>          
+        </div>
+        <div class="figure">
+          <div class="goal-anime">
+            <div class="goal-anime__item">
+              <div class="goal-anime__dot"></div>
+              <div class="goal-anime__text">{{ $t("goal.anime1") }}</div>
+            </div>
+            <div class="goal-anime__item" style="transform: rotate(240deg)">
+              <div class="goal-anime__dot"></div>
+              <div class="goal-anime__text">{{ $t("goal.anime2") }}</div>
+            </div>
+            <div class="goal-anime__item" style="transform: rotate(120deg)">
+              <div class="goal-anime__dot"></div>
+              <div class="goal-anime__text">{{ $t("goal.anime3") }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main d-none" id="advantage">
+        <div class="content content--max">
+          <h2 class="main__title"><span>{{ $t("advantage.title") }}</span></h2>
+          <div class="main__content">
+            <p class="main__text"><span>{{ $t("advantage.span1") }}</span> {{ $t("advantage.text1") }}</p>
+            <p class="main__text"><span>{{ $t("advantage.span2") }}</span> {{ $t("advantage.text2") }}</p>
+            <p class="main__text"><span>{{ $t("advantage.span3") }}</span> {{ $t("advantage.text3") }}</p>
+            <p class="main__text"><span>{{ $t("advantage.span4") }}</span> {{ $t("advantage.text4") }}</p>
+          </div>          
+        </div>
+        <div class="figure">
+          <div class="advantage-anime">
+            <div class="dot first"><span class="text-first">{{ $t("advantage.anime1") }}</span></div>
+            <div class="line one"><img src="./img/line-1.png" alt=""></div>
+            <div class="dot second"><span class="text-second">{{ $t("advantage.anime2") }}</span></div>
+            <div class="line two"><img src="./img/line-2.png" alt=""></div>
+            <div class="dot third"><span class="text-third">{{ $t("advantage.anime3") }}</span></div>
+            <div class="line three"><img src="./img/line-1.png" alt=""></div>
+            <div class="dot fourth"><span class="text-fourth">{{ $t("advantage.anime4") }}</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main d-none" id="service">
+        <div class="content content--max">
+          <h2 class="main__title main__title--service"><span>{{ $t("service.title") }}</span></h2>
+          <div class="main__content main__content--service">
+            <div class="main__block">
+              <div class="main__service">{{ $t("service.blockTitle1") }}</div>
+              <p class="main__text">{{ $t("service.blockText1") }} </p>
+            </div>
+            <div class="main__block">
+              <div class="main__service">{{ $t("service.blockTitle2") }}</div>
+              <p class="main__text">{{ $t("service.blockText2") }}</p>
+            </div>
+            <div class="main__block">
+              <div class="main__service">{{ $t("service.blockTitle3") }}</div>
+              <p class="main__text">{{ $t("service.blockText3") }}</p>
+            </div>
+            <div class="main__text--center">{{ $t("service.serviceText") }}</div>
+          </div>          
+        </div>
+        <div class="figure">
+          <div class="service-anime">
+            <div class="service-anime__item">
+              <div class="service-anime__dot"></div>
+              <div class="service-anime__text">{{ $t("service.anime1") }}</div>
+            </div>
+            <div class="service-anime__item" style="transform: rotate(240deg)">
+              <div class="service-anime__dot"></div>
+              <div class="service-anime__text">{{ $t("service.anime2") }}</div>
+            </div>
+            <div class="service-anime__item" style="transform: rotate(120deg)">
+              <div class="service-anime__dot"></div>
+              <div class="service-anime__text">{{ $t("service.anime3") }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main d-none" id="project">
+        <div class="content content--max content--project">
+          <div class="project__content">
+            <div class="project">
+              <div class="project__img"><img src="./img/top-security.png" alt=""></div>
+              <div class="project__block">
+                <p class="project__text">{{ $t("project.blockTextOne1") }}</p>
+                <p class="project__text">{{ $t("project.blockTextOne2") }}</p>
+                <p class="project__text">{{ $t("project.blockTextOne3") }}</p>
+                <div class="project__contact"><span>{{ $t("project.contact") }}</span> {{ $t("project.contact1") }}</div>
+                <div class="project__contact"><span>{{ $t("project.email") }}</span> {{ $t("project.email1") }}</div>
+                <a href="https://topsecurity.kz/" class="more" target="_blank">{{ $t("project.more") }}</a>
+              </div>
+            </div>
+            <div class="project">
+              <div class="project__img"><img src="./img/muratov-market.png" alt=""></div>
+              <div class="project__block">
+                <p class="project__text">{{ $t("project.blockTextTwo") }}</p>
+                <div class="project__contact"><span>{{ $t("project.address") }}</span> {{ $t("project.address2") }}</div>
+                <div class="project__contact"><span>{{ $t("project.instagram") }}</span> {{ $t("project.email2") }}</div>
+                <a href="" class="more" target="_blank">{{ $t("project.more") }}</a>
+              </div>
+            </div>
+            <div class="project">
+              <div class="project__img"><img src="./img/muratov-partners.png" alt=""></div>
+              <div class="project__block">
+                <p class="project__text">{{ $t("project.blockTextThree1") }}</p>
+                <p class="project__text">{{ $t("project.blockTextThree2") }}</p>
+                <div class="project__contact"><span>{{ $t("project.contact") }}</span> {{ $t("project.contact3") }}</div>
+                <div class="project__contact"><span>{{ $t("project.email") }}</span> {{ $t("project.email3") }}</div>
+                <a href="https://muratov.kz/" class="more" target="_blank">{{ $t("project.more") }}</a>
+              </div>
+            </div>    
+          </div>     
+        </div>
+        <div class="figure">
+          <img src="./img/top-security-green.png" alt="" class="project-anime">
+          <img src="./img/muratov-market-green.png" alt="" class="project-anime">
+          <img src="./img/muratov-partners-green.png" alt="" class="project-anime">
+        </div>
+      </div>
+
+      <div class="main d-none" id="contact">
+        <div class="content content--max">          
+          <div class="contact">
+            <div class="pmg-img">
+              <img src="./img/pmg-big.png" alt="">
+            </div>  
+            <div class="contact__address"><span>{{ $t("contact.address") }}</span> {{ $t("contact.addressText") }}</div>
+            <div class="contact__phone"><span>{{ $t("contact.phone") }}</span> <a href="tel:+77272777600" class="text-phone" id="phone_number">{{ $t("contact.phoneText") }}</a></div>
+            <div class="contact__email"><span>{{ $t("contact.email") }}</span> <a href="mailto:info@pmginvest.com">{{ $t("contact.emailText") }}</a> </div>          
+          </div>       
+        </div>
+        <div class="figure figure--map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0446560ab47e5dabe25fc2e2536de89f97d3994e37c2eb970c8ba7d579827b90&amp;source=constructor" width="100%" frameborder="0"></iframe>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="./js/libs.min.js"></script>
+  <script src="./js/anime-config.js"></script>
+  <script src="./js/localization.js"></script>
+  <script src="./js/main.min.js"></script>
+  
+</body>
+
+</html>
+
+

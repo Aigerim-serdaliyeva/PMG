@@ -156,6 +156,48 @@ h1, h2, h3, h4, h5, h6 {
 .active {
   display: block !important; }
 
+.maintenance {
+  width: 100%;
+  height: 100vh;
+  background: #004C36;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("../img/maintenance-back.png");
+  background-repeat: no-repeat; }
+  .maintenance__text {
+    font-size: 24px;
+    margin: 35px auto 30px;
+    text-align: center; }
+  .maintenance__contact {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 608px;
+    width: 100%;
+    font-size: 18px; }
+    .maintenance__contact a {
+      color: #fff !important; }
+
 .header {
   font-family: Arial, serif;
   -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.18);
@@ -1054,6 +1096,26 @@ h1, h2, h3, h4, h5, h6 {
     left: 60%;
     height: 15%;
     width: 500px; }
+  .maintenance {
+    background-size: cover;
+    background-position: center left; }
+    .maintenance .logo {
+      max-width: 300px; }
+    .maintenance__text {
+      font-size: 18px; }
+    .maintenance__contact {
+      font-size: 14px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .maintenance .contact__phone {
+      margin-bottom: 25px; }
   .header .logo img {
     max-width: 150px; }
   .header .rombs {
